@@ -9,8 +9,5 @@
         <module name="projects-glutton" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="projects-glutton" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>
