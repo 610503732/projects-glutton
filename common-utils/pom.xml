@@ -12,5 +12,13 @@
     <groupId>cn.com.git.common.utils</groupId>
     <artifactId>common-utils</artifactId>
 
+    <dependencies>
+        <!-- 对象拷贝 -->
+        <dependency>
+            <groupId>net.sf.dozer</groupId>
+            <artifactId>dozer</artifactId>
+            <version>5.5.1</version>
+        </dependency>
+    </dependencies>
 
 </project>
