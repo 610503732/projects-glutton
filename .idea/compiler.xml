@@ -6,10 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="cloud-study-consumer" />
+        <module name="cloud-study-api" />
+        <module name="cloud-study-controller" />
         <module name="cloud-study-eureka" />
+        <module name="cloud-study-hello" />
         <module name="common-utils" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cloud-study-consumer" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
