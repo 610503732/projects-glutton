@@ -4,7 +4,7 @@
 <head>
     <link type="image/x-icon" rel="icon" href="">
 
-    <title>应用默认首页</title>
+    <title>用户 sys_user</title>
 
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="cache-control" content="no-cache">
@@ -21,7 +21,7 @@
     /** 样式定义在页面渲染前 **/
 </style>
 <body>
-    简单的应用
+    用户也
 </body>
 <%-- <script type="text/javascript" src="${ctx}/a-static/nc-jquery/jquery-1.4.3.js"></script> --%>
 <script type="text/javascript">
