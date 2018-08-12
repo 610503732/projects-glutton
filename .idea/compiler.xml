@@ -9,6 +9,7 @@
         <module name="cloud" />
         <module name="common-utils" />
         <module name="mvc-template-base" />
+        <module name="mvc-template-mybatis" />
         <module name="native-template-base" />
         <module name="study-mybatis" />
       </profile>

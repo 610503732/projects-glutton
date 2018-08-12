@@ -16,6 +16,7 @@
         <module>cloud</module>
         <module>native-template-base</module>
         <module>study-mybatis</module>
+        <module>mvc-template-mybatis</module>
     </modules>
 
 </project>
