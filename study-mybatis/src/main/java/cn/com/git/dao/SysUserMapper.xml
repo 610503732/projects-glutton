@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.git.dao.SysUserMapper">
+    <!--
+    namespace:命名空间，指定接口的全类名
+    id:唯一性标识
+    resultType:返回值
+    #{id}:从传递过来的参数中取出ID值
+    -->
+    <resultMap id="BaseResultMap" type="cn.com.git.entity.SysUser">
+        <result column="id" javaType="Integer" jdbcType="INTEGER" property="id" />
+        <result column="user_code" javaType="String" jdbcType="VARCHAR" property="userCode" />
+        <result column="user_name" javaType="String" jdbcType="VARCHAR" property="userName" />
+    </resultMap>
+    <select id="selectSysUser" resultMap="BaseResultMap">
+        select * from sys_user where id = #{id}
+    </select>
+
+</mapper>
