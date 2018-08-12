@@ -10,6 +10,7 @@
         <module name="common-utils" />
         <module name="mvc-template-base" />
         <module name="native-template-base" />
+        <module name="study-mybatis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
