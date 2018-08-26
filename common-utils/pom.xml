@@ -19,6 +19,22 @@
             <artifactId>dozer</artifactId>
             <version>5.5.1</version>
         </dependency>
+
+        <!--ant zip包的下载 -->
+        <dependency>
+            <groupId>org.apache.ant</groupId>
+            <artifactId>ant</artifactId>
+            <version>1.9.4</version>
+        </dependency>
+
+
+        <!--  连接池 -->
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.4</version>
+        </dependency>
+
     </dependencies>
 
 </project>
