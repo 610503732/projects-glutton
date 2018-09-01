@@ -1,4 +1,4 @@
-package cn.com.git.app.entity.dto;
+package cn.com.git.app.entity.pojo;
 
 import java.io.Serializable;
 

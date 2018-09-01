@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.com.git.app.dao.SysDictionarysMapper" >
+  <resultMap id="BaseResultMap" type="cn.com.git.app.entity.pojo.SysDictionarys" >
+    <id column="ID" property="id" jdbcType="VARCHAR" />
+    <result column="KEY" property="key" jdbcType="VARCHAR" />
+    <result column="CODE" property="code" jdbcType="VARCHAR" />
+    <result column="VALUE" property="value" jdbcType="VARCHAR" />
+    <result column="SORT_NO" property="sortNo" jdbcType="DECIMAL" />
+    <result column="P_KEY" property="pKey" jdbcType="VARCHAR" />
+    <result column="P_CODE" property="pCode" jdbcType="VARCHAR" />
+    <result column="DICT_DESC" property="dictDesc" jdbcType="VARCHAR" />
+    <result column="ITEM_DESC" property="itemDesc" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, KEY, CODE, VALUE, SORT_NO, P_KEY, P_CODE, DICT_DESC, ITEM_DESC
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from SYS_DICTIONARYS
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from SYS_DICTIONARYS
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="cn.com.git.app.entity.pojo.SysDictionarys" >
+    insert into SYS_DICTIONARYS (ID, KEY, CODE, 
+      VALUE, SORT_NO, P_KEY, 
+      P_CODE, DICT_DESC, ITEM_DESC
+      )
+    values (#{id,jdbcType=VARCHAR}, #{key,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR}, 
+      #{value,jdbcType=VARCHAR}, #{sortNo,jdbcType=DECIMAL}, #{pKey,jdbcType=VARCHAR}, 
+      #{pCode,jdbcType=VARCHAR}, #{dictDesc,jdbcType=VARCHAR}, #{itemDesc,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="cn.com.git.app.entity.pojo.SysDictionarys" >
+    insert into SYS_DICTIONARYS
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="key != null" >
+        KEY,
+      </if>
+      <if test="code != null" >
+        CODE,
+      </if>
+      <if test="value != null" >
+        VALUE,
+      </if>
+      <if test="sortNo != null" >
+        SORT_NO,
+      </if>
+      <if test="pKey != null" >
+        P_KEY,
+      </if>
+      <if test="pCode != null" >
+        P_CODE,
+      </if>
+      <if test="dictDesc != null" >
+        DICT_DESC,
+      </if>
+      <if test="itemDesc != null" >
+        ITEM_DESC,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="key != null" >
+        #{key,jdbcType=VARCHAR},
+      </if>
+      <if test="code != null" >
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="value != null" >
+        #{value,jdbcType=VARCHAR},
+      </if>
+      <if test="sortNo != null" >
+        #{sortNo,jdbcType=DECIMAL},
+      </if>
+      <if test="pKey != null" >
+        #{pKey,jdbcType=VARCHAR},
+      </if>
+      <if test="pCode != null" >
+        #{pCode,jdbcType=VARCHAR},
+      </if>
+      <if test="dictDesc != null" >
+        #{dictDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="itemDesc != null" >
+        #{itemDesc,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.com.git.app.entity.pojo.SysDictionarys" >
+    update SYS_DICTIONARYS
+    <set >
+      <if test="key != null" >
+        KEY = #{key,jdbcType=VARCHAR},
+      </if>
+      <if test="code != null" >
+        CODE = #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="value != null" >
+        VALUE = #{value,jdbcType=VARCHAR},
+      </if>
+      <if test="sortNo != null" >
+        SORT_NO = #{sortNo,jdbcType=DECIMAL},
+      </if>
+      <if test="pKey != null" >
+        P_KEY = #{pKey,jdbcType=VARCHAR},
+      </if>
+      <if test="pCode != null" >
+        P_CODE = #{pCode,jdbcType=VARCHAR},
+      </if>
+      <if test="dictDesc != null" >
+        DICT_DESC = #{dictDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="itemDesc != null" >
+        ITEM_DESC = #{itemDesc,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.com.git.app.entity.pojo.SysDictionarys" >
+    update SYS_DICTIONARYS
+    set KEY = #{key,jdbcType=VARCHAR},
+      CODE = #{code,jdbcType=VARCHAR},
+      VALUE = #{value,jdbcType=VARCHAR},
+      SORT_NO = #{sortNo,jdbcType=DECIMAL},
+      P_KEY = #{pKey,jdbcType=VARCHAR},
+      P_CODE = #{pCode,jdbcType=VARCHAR},
+      DICT_DESC = #{dictDesc,jdbcType=VARCHAR},
+      ITEM_DESC = #{itemDesc,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>
