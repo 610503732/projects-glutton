@@ -2,6 +2,7 @@ package cn.com.git.app.service.api;
 
 
 import cn.com.git.app.entity.pojo.SysDictionarys;
+import cn.com.git.common.entity.DataResult;
 
 import java.util.List;
 
@@ -17,5 +18,10 @@ public interface SysDictionarysApi {
      */
     public List<SysDictionarys> getAllDict();
 
+    /**
+     * 添加数据字典
+     * @return
+     */
+    public DataResult addDict(SysDictionarys dict);
 
 }

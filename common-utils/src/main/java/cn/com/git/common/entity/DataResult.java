@@ -15,6 +15,8 @@ public class DataResult<T> implements Serializable {
      */
     private static final long serialVersionUID = 1L;
 
+    private static final String SUCCESS_MSG = "操作成功" ;
+
     private String message ;
 
     private Boolean success ;
@@ -31,6 +33,20 @@ public class DataResult<T> implements Serializable {
         this.message = message;
         this.success = success;
         this.data = data;
+    }
+
+    public static DataResult success(String message){
+        DataResult dr = new DataResult();
+        dr.setMessage(message);
+        dr.setSuccess(true);
+        return dr ;
+    }
+
+    public static DataResult successMsg(){
+        DataResult dr = new DataResult();
+        dr.setMessage(SUCCESS_MSG);
+        dr.setSuccess(true);
+        return dr ;
     }
 
     public String getMessage() {

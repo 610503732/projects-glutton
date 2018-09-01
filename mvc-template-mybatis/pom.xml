@@ -60,6 +60,13 @@
 
     <!--外部jar 依赖配置 -->
     <dependencies>
+
+        <dependency>
+            <groupId>cn.com.git.common.utils</groupId>
+            <artifactId>common-utils</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
         <!-- 添加spring核心依赖 -->
         <dependency>
             <groupId>org.springframework</groupId>
