@@ -1,11 +1,16 @@
 package cn.com.git.app.controller;
 
+import cn.com.git.app.entity.pojo.SysDictionarys;
 import cn.com.git.app.service.SysUserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
 
 
 /**
@@ -23,10 +28,13 @@ public class SysUserController {
     @Autowired
     private SysUserService sysUserService ;
 
+
     @RequestMapping("/index")
     public String index(String name) {
         logger.info("info:{}","用户页面 index ") ;
+
         return "sys_user/index" ;
     }
+
 
 }
