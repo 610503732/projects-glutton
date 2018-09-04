@@ -17,10 +17,6 @@
 	
 	<description>spring-orm 配置</description>
 
-	<!-- 扫描配置文件 spring3中提供-->
-	<context:property-placeholder location="classpath:database.properties" />
-
-
 	<!-- DataSource 连接池-->
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="username" value="${jdbc.userName}"></property>
@@ -46,11 +42,13 @@
    		<property name="basePackage" value="cn.com.git.**.dao" />
 	</bean>
 
+	<!-- 配置事务管理器 -->
 	<bean name="transactionManager"
 		  class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
 
+	<!-- 开启注解事务 -->
 	<tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true" />
 
 

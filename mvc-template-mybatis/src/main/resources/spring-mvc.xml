@@ -10,9 +10,14 @@
         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
         http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd"
 >
+    <!-- 开启AOP监听 -->
+    <aop:aspectj-autoproxy proxy-target-class="true" />
 
-    <!-- 组件扫描 -->
-    <context:component-scan base-package="cn.com.git" />
+    <!-- 自动扫描且只扫描 @Controller -->
+    <context:component-scan base-package="cn.com.git.**.controller" use-default-filters="false">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+        <context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice" />
+    </context:component-scan>
 
     <!-- 指定handlemapping -->
     <mvc:annotation-driven />
@@ -26,8 +31,7 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
-    <!-- 开启AOP监听 -->
-    <aop:aspectj-autoproxy/>
+
 
 
 </beans>
