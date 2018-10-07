@@ -24,6 +24,7 @@
 
     <!-- 静态资源解析 包括 ：js、css、img、.. 受到interceptor拦截器影响-->
     <mvc:resources mapping="/static/**" location="/static/"/>
+    <mvc:resources mapping="/assets/**" location="/assets/"/>
 
     <!-- 指定视图解析器 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

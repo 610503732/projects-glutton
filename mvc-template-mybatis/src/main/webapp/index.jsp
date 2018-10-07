@@ -15,132 +15,175 @@
     <meta http-equiv="description" content="This is my page">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <!-- style -->
-    <!--<link rel="stylesheet" type="text/css" href="css/styles.css">-->
-    <%-- <script type="text/javascript" src="${ctx}/a-static/nc-jquery/jquery-1.4.3.js"></script> --%>
-    <link rel="stylesheet" href="static/theme/layui/css/layui.css">
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/vendor/linearicons/style.css">
+    <link rel="stylesheet" href="assets/vendor/chartist/css/chartist-custom.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
+    <link rel="stylesheet" href="assets/css/demo.css">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+    <!-- ICONS -->
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+
+
 </head>
 <style type="text/css">
     /** 样式定义在页面渲染前 **/
 </style>
 <body>
-<div class="layui-layout-admin">
-    <!--头部-->
-    <div class="layui-header">
-        <div class="layui-logo"> MTM PROJECT </div>
-        <ul class="layui-nav layui-layout-left">
-            <li class="layui-nav-item"><a href="javascript:void(0)">控制台</a></li>
-            <li class="layui-nav-item"><a href="javascript:;">商品管理</a></li>
-            <li class="layui-nav-item">
-                <a href="javascript:;">其他系统</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="javascript:;">邮件管理</a></dd>
-                    <dd><a href="javascript:;">消息管理</a></dd>
-                    <dd><a href="javascript:;">授权管理</a></dd>
-                </dl>
-            </li>
-        </ul>
-        <ul class="layui-nav layui-layout-right">
-            <li class="layui-nav-item">
-                <a href=""><img src="http://m.zhengjinfan.cn/images/0.jpg" class="layui-nav-img">用户中心</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="">基本资料</a></dd>
-                    <dd><a href="">安全设置</a></dd>
-                </dl>
-            </li>
-        </ul>
-    </div>
-
-    <!--左侧-->
-    <div class="layui-side layui-bg-black">
-        <div class="layui-side-scroll">
-            <ul class="layui-nav layui-nav-tree" lay-filter="hbkNavbar">
-                <li class="layui-nav-item">
-                    <a href="javascript:;">基本元素</a>
-                    <dl class="layui-nav-child">
-                        <dd lay-id="111"><a href="javascript:;" data-options="{url:'test.html',title:'表格'}">表格</a></dd>
-                        <dd><a href="javascript:;">系统资源</a></dd>
-                        <dd><a href="javascript:;">导航栏</a></dd>
-                    </dl>
-                </li>
-                <li class="layui-nav-item layui-nav-itemed">
-                    <a href="javascript:;">组件</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">Navbar</a></dd>
-                        <dd><a href="javascript:;">Tab</a></dd>
-                        <dd><a href="javascript:;">OneLevel</a></dd>
-                        <dd><a href="javascript:;">app.js主入口</a></dd>
-                    </dl>
-                </li>
-                <li class="layui-nav-item">
-                    <a href="javascript:;">表格</a>
-                </li>
-                <li class="layui-nav-item">
-                    <a href="javascript:;">表单</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <!--中间主体-->
-    <div class="layui-body" id="container">
-        <div class="layui-tab" lay-filter="tabs" lay-allowClose="true">
-            <ul class="layui-tab-title">
-                <li class="layui-this">首页</li>
-            </ul>
-            <div class="layui-tab-content">
-                <div class="layui-tab-item layui-show">首页内容</div>
+    <!-- WRAPPER -->
+    <div id="wrapper">
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="brand">
+                <a href="index.html"><img src="assets/img/logo-dark.png" alt="Klorofil Logo" class="img-responsive logo"></a>
+            </div>
+            <div class="container-fluid">
+                <div class="navbar-btn">
+                    <button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
+                </div>
+                <form class="navbar-form navbar-left">
+                    <div class="input-group">
+                        <input type="text" value="" class="form-control" placeholder="Search dashboard...">
+                        <span class="input-group-btn"><button type="button" class="btn btn-primary">Go</button></span>
+                    </div>
+                </form>
+                <div class="navbar-btn navbar-btn-right">
+                    <a class="btn btn-success update-pro" href="#downloads/klorofil-pro-bootstrap-admin-dashboard-template/?utm_source=klorofil&utm_medium=template&utm_campaign=KlorofilPro" title="Upgrade to Pro" target="_blank"><i class="fa fa-rocket"></i> <span>UPGRADE TO PRO</span></a>
+                </div>
+                <div id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                <i class="lnr lnr-alarm"></i>
+                                <span class="badge bg-danger">5</span>
+                            </a>
+                            <ul class="dropdown-menu notifications">
+                                <li><a href="#" class="notification-item"><span class="dot bg-warning"></span>System space is almost full</a></li>
+                                <li><a href="#" class="notification-item"><span class="dot bg-danger"></span>You have 9 unfinished tasks</a></li>
+                                <li><a href="#" class="notification-item"><span class="dot bg-success"></span>Monthly report is available</a></li>
+                                <li><a href="#" class="notification-item"><span class="dot bg-warning"></span>Weekly meeting in 1 hour</a></li>
+                                <li><a href="#" class="notification-item"><span class="dot bg-success"></span>Your request has been approved</a></li>
+                                <li><a href="#" class="more">See all notifications</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="lnr lnr-question-circle"></i> <span>Help</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Basic Use</a></li>
+                                <li><a href="#">Working With Data</a></li>
+                                <li><a href="#">Security</a></li>
+                                <li><a href="#">Troubleshooting</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="assets/img/user.png" class="img-circle" alt="Avatar"> <span>Samuel</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
+                                <li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
+                                <li><a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li>
+                                <li><a href="#"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
+                            </ul>
+                        </li>
+                        <!-- <li>
+                            <a class="update-pro" href="#downloads/klorofil-pro-bootstrap-admin-dashboard-template/?utm_source=klorofil&utm_medium=template&utm_campaign=KlorofilPro" title="Upgrade to Pro" target="_blank"><i class="fa fa-rocket"></i> <span>UPGRADE TO PRO</span></a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- END NAVBAR -->
+        <!-- LEFT SIDEBAR -->
+        <div id="sidebar-nav" class="sidebar">
+            <div class="sidebar-scroll">
+                <nav>
+                    <ul class="nav">
+                        <li><a href="javascript:;" class="active"><i class="lnr lnr-home"></i> <span>首页</span></a></li>
+                        <li>
+                            <a href="#subPages1" data-toggle="collapse" class="collapsed"><i class="lnr lnr-cog"></i> <span>系统配置</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+                            <div id="subPages1" class="collapse ">
+                                <ul class="nav">
+                                    <li><a href="javascript:;" class="">系统资源</a></li>
+                                    <li><a href="javascript:;" class="">系统角色</a></li>
+                                    <li><a href="javascript:;" class="">系统用户</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="javascript:;" class=""><i class="lnr lnr-chart-bars"></i> <span>Charts</span></a></li>
+                        <li><a href="javascript:;" class=""><i class="lnr lnr-cog"></i> <span>Panels</span></a></li>
+                        <li><a href="javascript:;" class=""><i class="lnr lnr-alarm"></i> <span>Notifications</span></a></li>
+                        <li>
+                            <a href="#subPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>Pages</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+                            <div id="subPages" class="collapse ">
+                                <ul class="nav">
+                                    <li><a href="javascript:;" class="">Profile</a></li>
+                                    <li><a href="javascript:;" class="">Login</a></li>
+                                    <li><a href="javascript:;" class="">Lockscreen</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="javascript:;" class=""><i class="lnr lnr-dice"></i> <span>Tables</span></a></li>
+                        <li><a href="javascript:;" class=""><i class="lnr lnr-text-format"></i> <span>Typography</span></a></li>
+                        <li><a href="javascript:;" class=""><i class="lnr lnr-linearicons"></i> <span>Icons</span></a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
+        <!-- END LEFT SIDEBAR -->
+        <!-- MAIN -->
+        <div class="main">
+            <!-- MAIN CONTENT -->
+            <div class="main-content">
+                <div class="container-fluid">
+                    <!-- OVERVIEW -->
+                    <div class="panel panel-headline">
+                        <div class="panel-heading">
+                            <p class="panel-subtitle">Period: Oct 14, 2016 - Oct 21, 2016</p>
+                        </div>
+                    </div>
+
+                    <%--<div class="panel panel-headline">--%>
+                        <%--<div class="panel-heading">--%>
+                            <%--<h3 class="panel-title">Weekly Overview</h3>--%>
+                            <%--<p class="panel-subtitle">Period: Oct 14, 2016 - Oct 21, 2016</p>--%>
+                        <%--</div>--%>
+                        <%--<div class="panel-body">--%>
+
+                        <%--</div>--%>
+                    <%--</div>--%>
+
+                    <div >
+                        <iframe frameborder="0" src="mtm/dict/all"></iframe>
+                    </div>
+                    <!-- END OVERVIEW -->
+                </div>
+            </div>
+            <!-- END MAIN CONTENT -->
+        </div>
+        <!-- END MAIN -->
+        <div class="clearfix"></div>
+        <footer>
+            <div class="container-fluid">
+                <p class="copyright">Copyright &copy; 2017.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+            </div>
+        </footer>
     </div>
-
-</div>
-
 </body>
-<script type="text/javascript" src="static/plugs/jquery/jquery-1.4.3.js"></script>
-<script type="text/javascript" src="static/theme/layui/layui.js"></script>
-<script type="text/javascript">
-    /** js 放在 DOM 加载后执行 **/
-    layui.use('element', function(){
-        var $ = layui.jquery;
-        var element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
+<!-- END WRAPPER -->
+<!-- Javascript -->
+<script src="assets/vendor/jquery/jquery.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+<script src="assets/vendor/chartist/js/chartist.min.js"></script>
+<script src="assets/scripts/klorofil-common.js"></script>
+<script>
 
-        //触发事件
-        var active = {
-            //在这里给active绑定几项事件，后面可通过active调用这些事件
-            tabAdd: function(url,id,name) {
-                //新增一个Tab项 传入三个参数，分别对应其标题，tab页面的地址，还有一个规定的id，是标签中data-id的属性值
-                //关于tabAdd的方法所传入的参数可看layui的开发文档中基础方法部分
-                element.tabAdd('demo', {
-                    title: name,
-                    content: '<iframe data-frameid="'+id+'" scrolling="auto" frameborder="0" src="'+url+'.html" style="width:100%;height:99%;"></iframe>',
-                    id: id //规定好的id
-                })
-                FrameWH();  //计算ifram层的大小
-            },
-            tabChange: function(id) {
-                //切换到指定Tab项
-                element.tabChange('demo', id); //根据传入的id传入到指定的tab项
-            },
-            tabDelete: function (id) {
-                element.tabDelete("demo", id);//删除
-            }
-            , tabDeleteAll: function (ids) {//删除所有
-                $.each(ids, function (i,item) {
-                    element.tabDelete("demo", item); //ids是一个数组，里面存放了多个id，调用tabDelete方法分别删除
-                })
-            }
-        };
-
-        function FrameWH() {
-            var h = $(window).height() -41- 10 - 60 -10-44 -10;
-            $("iframe").css("height",h+"px");
-        }
-
-        $(window).resize(function () {
-            FrameWH();
-        })
-
-    });
 </script>
 </html>
