@@ -18,129 +18,117 @@
     <!-- style -->
     <!--<link rel="stylesheet" type="text/css" href="css/styles.css">-->
     <%-- <script type="text/javascript" src="${ctx}/a-static/nc-jquery/jquery-1.4.3.js"></script> --%>
-    <link rel="stylesheet" href="static/theme/layui/css/layui.css">
+    <link rel="stylesheet" href="static/theme/layui/css/layui.css" media="all" >
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_tnyc012u2rlwstt9.css" media="all" />
+    <link rel="stylesheet" href="static/theme/css/main.css" media="all" />
 </head>
 <style type="text/css">
     /** 样式定义在页面渲染前 **/
 </style>
 <body>
-<div class="layui-layout-admin">
-    <!--头部-->
-    <div class="layui-header">
-        <div class="layui-logo">Huang BaoKang</div>
-        <ul class="layui-nav layui-layout-left">
-            <li class="layui-nav-item"><a href="javascript:void(0)">控制台</a></li>
-            <li class="layui-nav-item"><a href="javascript:;">商品管理</a></li>
-            <li class="layui-nav-item">
-                <a href="javascript:;">其他系统</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="javascript:;">邮件管理</a></dd>
-                    <dd><a href="javascript:;">消息管理</a></dd>
-                    <dd><a href="javascript:;">授权管理</a></dd>
-                </dl>
-            </li>
-        </ul>
-        <ul class="layui-nav layui-layout-right">
-            <li class="layui-nav-item">
-                <a href=""><img src="http://m.zhengjinfan.cn/images/0.jpg" class="layui-nav-img">Huang BaoKang</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="">基本资料</a></dd>
-                    <dd><a href="">安全设置</a></dd>
-                </dl>
-            </li>
-        </ul>
-    </div>
+<div class="main_body">
+    <div class="layui-layout layui-layout-admin">
+        <!-- 顶部 -->
+        <div class="layui-header header">
+            <div class="layui-main">
+                <a href="#" class="logo">LAYUI 后台管理</a>
+                <!-- 显示/隐藏菜单 -->
+                <a href="javascript:;" class="iconfont hideMenu icon-menu1"></a>
+                <!-- 搜索 -->
+                <div class="layui-form component">
+                    <select name="modules" lay-verify="required" lay-search="">
+                        <option value="">直接选择或搜索选择</option>
+                        <option value="1">layer</option>
+                        <option value="2">form</option>
+                        <option value="3">layim</option>
+                        <option value="4">element</option>
+                        <option value="5">laytpl</option>
+                        <option value="6">upload</option>
+                        <option value="7">laydate</option>
+                        <option value="8">laypage</option>
+                        <option value="9">flow</option>
+                        <option value="10">util</option>
+                    </select>
+                    <i class="layui-icon">&#xe615;</i>
+                </div>
 
-    <!--左侧-->
-    <div class="layui-side layui-bg-black">
-        <div class="layui-side-scroll">
-            <ul class="layui-nav layui-nav-tree" lay-filter="hbkNavbar">
-                <li class="layui-nav-item">
-                    <a href="javascript:;">基本元素</a>
-                    <dl class="layui-nav-child">
-                        <dd lay-id="111"><a href="javascript:;" data-options="{url:'test.html',title:'表格'}">表格</a></dd>
-                        <dd><a href="javascript:;">表单</a></dd>
-                        <dd><a href="javascript:;">导航栏</a></dd>
-                    </dl>
-                </li>
-                <li class="layui-nav-item layui-nav-itemed">
-                    <a href="javascript:;">组件</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">Navbar</a></dd>
-                        <dd><a href="javascript:;">Tab</a></dd>
-                        <dd><a href="javascript:;">OneLevel</a></dd>
-                        <dd><a href="javascript:;">app.js主入口</a></dd>
-                    </dl>
-                </li>
-                <li class="layui-nav-item">
-                    <a href="javascript:;">表格</a>
-                </li>
-                <li class="layui-nav-item">
-                    <a href="javascript:;">表单</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <!--中间主体-->
-    <div class="layui-body" id="container">
-        <div class="layui-tab" lay-filter="tabs" lay-allowClose="true">
-            <ul class="layui-tab-title">
-                <li class="layui-this">首页</li>
-            </ul>
-            <div class="layui-tab-content">
-                <div class="layui-tab-item layui-show">首页内容</div>
+                <!-- 顶部右侧菜单 -->
+                <ul class="layui-nav top_menu">
+                    <li class="layui-nav-item showNotice" id="showNotice" pc>
+                        <a href="javascript:;"><i class="iconfont icon-gonggao"></i><cite>系统公告</cite></a>
+                    </li>
+                    <li class="layui-nav-item" mobile>
+                        <a href="javascript:;" class="mobileAddTab" data-url="page/user/changePwd.html"><i class="iconfont icon-shezhi1" data-icon="icon-shezhi1"></i><cite>设置</cite></a>
+                    </li>
+                    <li class="layui-nav-item" mobile>
+                        <a href="page/login/login.html" class="signOut"><i class="iconfont icon-loginout"></i> 退出</a>
+                    </li>
+                    <li class="layui-nav-item lockcms" pc>
+                        <a href="javascript:;"><i class="iconfont icon-lock1"></i><cite>锁屏</cite></a>
+                    </li>
+                    <li class="layui-nav-item" pc>
+                        <a href="javascript:;">
+                            <img src="static/theme/image/face.jpg" class="layui-circle" width="35" height="35">
+                            <cite>请叫我马哥</cite>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;" data-url="page/user/userInfo.html"><i class="iconfont icon-zhanghu" data-icon="icon-zhanghu"></i><cite>个人资料</cite></a></dd>
+                            <dd><a href="javascript:;" data-url="page/user/changePwd.html"><i class="iconfont icon-shezhi1" data-icon="icon-shezhi1"></i><cite>修改密码</cite></a></dd>
+                            <dd><a href="javascript:;" class="changeSkin"><i class="iconfont icon-huanfu"></i><cite>更换皮肤</cite></a></dd>
+                            <dd><a href="page/login/login.html" class="signOut"><i class="iconfont icon-loginout"></i><cite>退出</cite></a></dd>
+                        </dl>
+                    </li>
+                </ul>
             </div>
         </div>
+        <!-- 左侧导航 -->
+        <div class="layui-side layui-bg-black">
+            <div class="user-photo">
+                <a class="img" title="我的头像" ><img src="${ctx}/static/theme/image/face.jpg"></a>
+                <p>你好！<span class="userName">请叫我马哥</span>, 欢迎登录</p>
+            </div>
+            <div class="navBar layui-side-scroll"></div>
+        </div>
+        <!-- 右侧内容 -->
+        <div class="layui-body layui-form">
+            <div class="layui-tab marg0" lay-filter="bodyTab" id="top_tabs_box">
+                <ul class="layui-tab-title top_tab" id="top_tabs">
+                    <li class="layui-this" lay-id=""><i class="iconfont icon-computer"></i> <cite>后台首页</cite></li>
+                </ul>
+                <ul class="layui-nav closeBox">
+                    <li class="layui-nav-item">
+                        <a href="javascript:;"><i class="iconfont icon-caozuo"></i> 页面操作</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;" class="refresh refreshThis"><i class="layui-icon">&#x1002;</i> 刷新当前</a></dd>
+                            <dd><a href="javascript:;" class="closePageOther"><i class="iconfont icon-prohibit"></i> 关闭其他</a></dd>
+                            <dd><a href="javascript:;" class="closePageAll"><i class="iconfont icon-guanbi"></i> 关闭全部</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+                <div class="layui-tab-content clildFrame">
+                    <div class="layui-tab-item layui-show">
+                        <iframe src="${ctx}/welcome/index"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部 -->
+        <div class="layui-footer footer">
+            <p>copyright @2017</p>
+        </div>
     </div>
 
+    <!-- 移动导航 -->
+    <div class="site-tree-mobile layui-hide"><i class="layui-icon">&#xe602;</i></div>
+    <div class="site-mobile-shade"></div>
 </div>
 
 </body>
-<script type="text/javascript" src="static/plugs/jquery/jquery-1.4.3.js"></script>
 <script type="text/javascript" src="static/theme/layui/layui.js"></script>
+<script type="text/javascript" src="static/theme/js/leftNav.js"></script>
+<script type="text/javascript" src="static/theme/js/index.js"></script>
 <script type="text/javascript">
-    /** js 放在 DOM 加载后执行 **/
-    layui.use('element', function(){
-        var $ = layui.jquery;
-        var element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
 
-        //触发事件
-        var active = {
-            //在这里给active绑定几项事件，后面可通过active调用这些事件
-            tabAdd: function(url,id,name) {
-                //新增一个Tab项 传入三个参数，分别对应其标题，tab页面的地址，还有一个规定的id，是标签中data-id的属性值
-                //关于tabAdd的方法所传入的参数可看layui的开发文档中基础方法部分
-                element.tabAdd('demo', {
-                    title: name,
-                    content: '<iframe data-frameid="'+id+'" scrolling="auto" frameborder="0" src="'+url+'.html" style="width:100%;height:99%;"></iframe>',
-                    id: id //规定好的id
-                })
-                FrameWH();  //计算ifram层的大小
-            },
-            tabChange: function(id) {
-                //切换到指定Tab项
-                element.tabChange('demo', id); //根据传入的id传入到指定的tab项
-            },
-            tabDelete: function (id) {
-                element.tabDelete("demo", id);//删除
-            }
-            , tabDeleteAll: function (ids) {//删除所有
-                $.each(ids, function (i,item) {
-                    element.tabDelete("demo", item); //ids是一个数组，里面存放了多个id，调用tabDelete方法分别删除
-                })
-            }
-        };
-
-        function FrameWH() {
-            var h = $(window).height() -41- 10 - 60 -10-44 -10;
-            $("iframe").css("height",h+"px");
-        }
-
-        $(window).resize(function () {
-            FrameWH();
-        })
-
-    });
 </script>
 </html>
