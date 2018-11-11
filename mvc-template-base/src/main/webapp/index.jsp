@@ -83,9 +83,9 @@
             <div class=" layui-side-scroll">
                 <div class="layadmin-user-photo" lay-href="home/console.html">
                     <a class="img" title="我的头像" ><img src="${ctx}/static/theme/image/face.jpg"></a>
-                    <p>你好！<span class="userName">用户XXX</span>, 欢迎登录</p>
+                    <p>你好！<span >用户XXX</span>, 欢迎登录</p>
                 </div>
-                <div class="layadmin-nav-bar navBar"></div>
+                <div class="layadmin-nav-bar"></div>
             </div>
         </div>
         <!-- 右侧内容 -->
@@ -362,7 +362,8 @@
         tab = layui.tab({
             openTabNum : "50",  //最大可打开窗口数量
             url : "static/json/navs.json", //获取菜单json地址
-            parseNavBar:appIndex.parseNavBar
+            parseNavBar:appIndex.parseNavBar,
+            navBar:".layadmin-nav-bar"
         });
         element = layui.element;
         layer = layui.layer;

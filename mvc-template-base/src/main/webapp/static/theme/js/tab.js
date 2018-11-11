@@ -15,6 +15,7 @@ layui.define(["element","jquery"],function(exports){
                 navData:undefined,//菜单数据，优先于 url
                 url : undefined  ,//获取菜单json地址
                 parseNavBar:undefined,//解析组装 导航栏的方法
+                navBar:undefined    //导航栏上层容器
             }
         };
 
@@ -90,14 +91,15 @@ layui.define(["element","jquery"],function(exports){
     Tab.prototype.render = function() {
         var url = this.tabConfig.url;
         var parse = this.tabConfig.parseNavBar;
+        var $navBar = $(this.tabConfig.navBar) ;
         $.get(url,function(data){
             //显示左侧菜单
-            if($(".navBar").html() == ''){
+            if($navBar.html() == ''){
                 var _this = this;
-                $(".navBar").html(parse(data)).height($(window).height()-245);
+                $navBar.html(parse(data)).height($(window).height()-245);
                 element.init();  //初始化页面元素
                 $(window).resize(function(){
-                    $(".navBar").height($(window).height()-245);
+                    $navBar.height($(window).height()-245);
                 })
             }
         })
