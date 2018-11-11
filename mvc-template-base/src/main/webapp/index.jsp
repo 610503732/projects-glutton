@@ -21,82 +21,80 @@
     <link rel="stylesheet" href="static/theme/layui/css/layui.css" media="all" >
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="//at.alicdn.com/t/font_tnyc012u2rlwstt9.css" media="all" />
-    <link rel="stylesheet" href="static/theme/css/main.css" media="all" />
+    <link rel="stylesheet" href="static/theme/css/common.css" media="all" />
+    <link rel="stylesheet" href="static/theme/css/special.css" media="all" />
+    <link rel="stylesheet" href="static/theme/css/transition.css" media="all" />
+    <%--<link rel="stylesheet" href="static/theme/css/main.css" media="all" />--%>
 </head>
 <style type="text/css">
     /** 样式定义在页面渲染前 **/
 </style>
 <body>
-<div class="main_body">
+<div class="layadmin-box layadmin-body">
+
     <div class="layui-layout layui-layout-admin">
         <!-- 顶部 -->
-        <div class="layui-header header">
-            <div class="layui-main">
-                <a href="#" class="logo">LAYUI 后台管理</a>
-                <!-- 显示/隐藏菜单 -->
-                <a href="javascript:;" class="iconfont hideMenu icon-menu1"></a>
-                <!-- 搜索 -->
-                <div class="layui-form component">
-                    <select name="modules" lay-verify="required" lay-search="">
-                        <option value="">直接选择或搜索选择</option>
-                        <option value="1">layer</option>
-                        <option value="2">form</option>
-                        <option value="3">layim</option>
-                        <option value="4">element</option>
-                        <option value="5">laytpl</option>
-                        <option value="6">upload</option>
-                        <option value="7">laydate</option>
-                        <option value="8">laypage</option>
-                        <option value="9">flow</option>
-                        <option value="10">util</option>
-                    </select>
-                    <i class="layui-icon">&#xe615;</i>
-                </div>
-
-                <!-- 顶部右侧菜单 -->
-                <ul class="layui-nav top_menu">
-                    <li class="layui-nav-item showNotice" id="showNotice" pc>
-                        <a href="javascript:;"><i class="iconfont icon-gonggao"></i><cite>系统公告</cite></a>
-                    </li>
-                    <li class="layui-nav-item" mobile>
-                        <a href="javascript:;" class="mobileAddTab" data-url="page/user/changePwd.html"><i class="iconfont icon-shezhi1" data-icon="icon-shezhi1"></i><cite>设置</cite></a>
-                    </li>
-                    <li class="layui-nav-item" mobile>
-                        <a href="page/login/login.html" class="signOut"><i class="iconfont icon-loginout"></i> 退出</a>
-                    </li>
-                    <li class="layui-nav-item lockcms" pc>
-                        <a href="javascript:;"><i class="iconfont icon-lock1"></i><cite>锁屏</cite></a>
-                    </li>
-                    <li class="layui-nav-item" pc>
-                        <a href="javascript:;">
-                            <img src="static/theme/image/face.jpg" class="layui-circle" width="35" height="35">
-                            <cite>用户XXX</cite>
-                        </a>
-                        <dl class="layui-nav-child">
-                            <dd><a href="javascript:;" data-url="page/user/userInfo.html"><i class="iconfont icon-zhanghu" data-icon="icon-zhanghu"></i><cite>个人资料</cite></a></dd>
-                            <dd><a href="javascript:;" data-url="page/user/changePwd.html"><i class="iconfont icon-shezhi1" data-icon="icon-shezhi1"></i><cite>修改密码</cite></a></dd>
-                            <dd><a href="javascript:;" class="changeSkin"><i class="iconfont icon-huanfu"></i><cite>更换皮肤</cite></a></dd>
-                            <dd><a href="page/login/login.html" class="signOut"><i class="iconfont icon-loginout"></i><cite>退出</cite></a></dd>
-                        </dl>
-                    </li>
-                </ul>
+        <div class="layadmin-header-box layui-header layadmin-header-body">
+            <a href="#" class="layadmin-logo text-center">LAYUI 后台管理</a>
+            <!-- 显示/隐藏菜单 -->
+            <a href="javascript:;" class="layadmin-menu-toggle text-center float-left iconfont icon-menu1"></a>
+            <!-- 头部搜索框 -->
+            <div class="layui-form layadmin-header-search float-left ">
+                <select name="modules" lay-verify="required" lay-search="" >
+                    <option value="">直接选择或搜索选择</option>
+                    <option value="1">layer</option>
+                    <option value="2">form</option>
+                    <option value="3">layim</option>
+                </select>
+                <i class="layui-icon">&#xe615;</i>
             </div>
+
+            <!-- 顶部右侧菜单 -->
+            <ul class="layui-nav layui-layout-right layadmin-nav layadmin-header-menu">
+                <li class="layui-nav-item">
+                    <a href="javascript:;"><i class="iconfont icon-gonggao"></i><cite>系统公告</cite></a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;"  data-url="page/user/changePwd.html"><i class="iconfont icon-shezhi1" data-icon="icon-shezhi1"></i><cite>设置</cite></a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="page/login/login.html" ><i class="iconfont icon-loginout"></i> 退出</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;"><i class="iconfont icon-lock1"></i><cite>锁屏</cite></a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">
+                        <img src="static/theme/image/face.jpg" class="layui-circle" width="35" height="35">
+                        <cite>请叫我马哥</cite>
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" data-url="page/user/userInfo.html"><i class="iconfont icon-zhanghu" data-icon="icon-zhanghu"></i><cite>个人资料</cite></a></dd>
+                        <dd><a href="javascript:;" data-url="page/user/changePwd.html"><i class="iconfont icon-shezhi1" data-icon="icon-shezhi1"></i><cite>修改密码</cite></a></dd>
+                        <dd><a href="javascript:;" class="changeSkin"><i class="iconfont icon-huanfu"></i><cite>更换皮肤</cite></a></dd>
+                        <dd><a href="page/login/login.html" class="signOut"><i class="iconfont icon-loginout"></i><cite>退出</cite></a></dd>
+                    </dl>
+                </li>
+            </ul>
+
         </div>
         <!-- 左侧导航 -->
-        <div class="layui-side layui-bg-black">
-            <div class="user-photo">
-                <a class="img" title="我的头像" ><img src="${ctx}/static/theme/image/face.jpg"></a>
-                <p>你好！<span class="userName">用户XXX</span>, 欢迎登录</p>
+        <div class="layadmin-side-left-box layui-side layui-bg-black layadmin-side-left-body ">
+            <div class=" layui-side-scroll">
+                <div class="layadmin-user-photo" lay-href="home/console.html">
+                    <a class="img" title="我的头像" ><img src="${ctx}/static/theme/image/face.jpg"></a>
+                    <p>你好！<span class="userName">用户XXX</span>, 欢迎登录</p>
+                </div>
+                <div class="layadmin-nav-bar navBar"></div>
             </div>
-            <div class="navBar layui-side-scroll"></div>
         </div>
         <!-- 右侧内容 -->
-        <div class="layui-body layui-form">
-            <div class="layui-tab marg0" lay-filter="bodyTab" id="top_tabs_box">
-                <ul class="layui-tab-title top_tab" id="top_tabs">
+        <div class="layadmin-side-right-box layui-body layui-form layadmin-side-right-body overflow-hidden">
+            <div class="layui-tab layadmin-tab layadmin-container marg0" lay-filter="bodyTab" id="layadmin-container">
+                <ul class="layui-tab-title layadmin-tab-pages" id="tab-pages">
                     <li class="layui-this" lay-id=""><i class="iconfont icon-computer"></i> <cite>后台首页</cite></li>
                 </ul>
-                <ul class="layui-nav closeBox">
+                <ul class="layui-nav layadmin-tab-ctrls">
                     <li class="layui-nav-item">
                         <a href="javascript:;"><i class="iconfont icon-caozuo"></i> 页面操作</a>
                         <dl class="layui-nav-child">
@@ -106,7 +104,7 @@
                         </dl>
                     </li>
                 </ul>
-                <div class="layui-tab-content clildFrame">
+                <div class="layui-tab-content layadmin-tab-content ">
                     <div class="layui-tab-item layui-show">
                         <iframe src="${ctx}/welcome/index"></iframe>
                     </div>
@@ -114,14 +112,11 @@
             </div>
         </div>
         <!-- 底部 -->
-        <div class="layui-footer footer">
+        <div class="layadmin-footer-box layui-footer text-center">
             <p>copyright @2017</p>
         </div>
     </div>
 
-    <!-- 移动导航 -->
-    <div class="site-tree-mobile layui-hide"><i class="layui-icon">&#xe602;</i></div>
-    <div class="site-mobile-shade"></div>
 </div>
 
 </body>
@@ -152,8 +147,8 @@
             })
 
             //隐藏左侧导航
-            $(".hideMenu").click(function(){
-                $(".layui-layout-admin").toggleClass("showMenu");
+            $(".layadmin-menu-toggle").click(function(){
+                $(".layui-layout-admin").toggleClass("layadmin-menu-toggle-show");
                 //渲染顶部窗口
                 tab.tabMove();
             })
@@ -175,7 +170,7 @@
             $(".refresh").on("click",function(){  //此处添加禁止连续点击刷新一是为了降低服务器压力，另外一个就是为了防止超快点击造成chrome本身的一些js文件的报错(不过貌似这个问题还是存在，不过概率小了很多)
                 if($(this).hasClass("refreshThis")){
                     $(this).removeClass("refreshThis");
-                    $(".clildFrame .layui-tab-item.layui-show").find("iframe")[0].contentWindow.location.reload(true);
+                    $(".layadmin-tab-content .layui-tab-item.layui-show").find("iframe")[0].contentWindow.location.reload(true);
                     setTimeout(function(){
                         $(".refresh").addClass("refreshThis");
                     },2000)
@@ -186,22 +181,22 @@
 
             //关闭其他
             $(".closePageOther").on("click",function(){
-                if($("#top_tabs li").length>2 && $("#top_tabs li.layui-this cite").text()!="后台首页"){
+                if($("#tab-pages li").length>2 && $("#tab-pages li.layui-this cite").text()!="后台首页"){
                     var menu = JSON.parse(window.sessionStorage.getItem("menu"));
-                    $("#top_tabs li").each(function(){
+                    $("#tab-pages li").each(function(){
                         if($(this).attr("lay-id") != '' && !$(this).hasClass("layui-this")){
                             element.tabDelete("bodyTab",$(this).attr("lay-id")).init();
                             //此处将当前窗口重新获取放入session，避免一个个删除来回循环造成的不必要工作量
                             for(var i=0;i<menu.length;i++){
-                                if($("#top_tabs li.layui-this cite").text() == menu[i].title){
+                                if($("#tab-pages li.layui-this cite").text() == menu[i].title){
                                     menu.splice(0,menu.length,menu[i]);
                                     window.sessionStorage.setItem("menu",JSON.stringify(menu));
                                 }
                             }
                         }
                     })
-                }else if($("#top_tabs li.layui-this cite").text()=="后台首页" && $("#top_tabs li").length>1){
-                    $("#top_tabs li").each(function(){
+                }else if($("#tab-pages li.layui-this cite").text()=="后台首页" && $("#tab-pages li").length>1){
+                    $("#tab-pages li").each(function(){
                         if($(this).attr("lay-id") != '' && !$(this).hasClass("layui-this")){
                             element.tabDelete("bodyTab",$(this).attr("lay-id")).init();
                             window.sessionStorage.removeItem("menu");
@@ -217,8 +212,8 @@
             })
             //关闭全部
             $(".closePageAll").on("click",function(){
-                if($("#top_tabs li").length > 1){
-                    $("#top_tabs li").each(function(){
+                if($("#tab-pages li").length > 1){
+                    $("#tab-pages li").each(function(){
                         if($(this).attr("lay-id") != ''){
                             element.tabDelete("bodyTab",$(this).attr("lay-id")).init();
                             window.sessionStorage.removeItem("menu");

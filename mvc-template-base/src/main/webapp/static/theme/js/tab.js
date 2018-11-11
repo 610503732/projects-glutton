@@ -48,7 +48,7 @@ layui.define(["element","jquery"],function(exports){
             }
             //已打开的窗口中不存在
             if(that.hasTab(_this.find("cite").text()) == -1 && _this.siblings("dl.layui-nav-child").length == 0){
-                if($(".layui-tab-title.top_tab li").length == openTabNum){
+                if($(".layui-tab-title.layadmin-tab-pages li").length == openTabNum){
                     layer.msg('只能同时打开'+openTabNum+'个选项卡哦。不然系统会卡的！');
                     return;
                 }
@@ -106,7 +106,7 @@ layui.define(["element","jquery"],function(exports){
     //通过title判断tab是否存在
     Tab.prototype.hasTab = function(title){
         var tabIndex = -1;
-        $(".layui-tab-title.top_tab li").each(function(){
+        $(".layui-tab-title.layadmin-tab-pages li").each(function(){
             if($(this).find("cite").text() == title){
                 tabIndex = 1;
             }
@@ -116,7 +116,7 @@ layui.define(["element","jquery"],function(exports){
 
     //通过title获取lay-id
     Tab.prototype.getLayId = function(title){
-        $(".layui-tab-title.top_tab li").each(function(){
+        $(".layui-tab-title.layadmin-tab-pages li").each(function(){
             if($(this).find("cite").text() == title){
                 layId = $(this).attr("lay-id");
             }
@@ -127,12 +127,12 @@ layui.define(["element","jquery"],function(exports){
     //顶部窗口移动
     Tab.prototype.tabMove = function(){
         $(window).on("resize",function(){
-            var topTabsBox = $("#top_tabs_box"),
-                topTabsBoxWidth = $("#top_tabs_box").width(),
-                topTabs = $("#top_tabs"),
-                topTabsWidth = $("#top_tabs").width(),
+            var topTabsBox = $("#layadmin-container"),
+                topTabsBoxWidth = $("#layadmin-container").width(),
+                topTabs = $("#tab-pages"),
+                topTabsWidth = $("#tab-pages").width(),
                 tabLi = topTabs.find("li.layui-this"),
-                top_tabs = document.getElementById("top_tabs");;
+                top_tabs = document.getElementById("tab-pages");;
 
             if(topTabsWidth > topTabsBoxWidth){
                 if(tabLi.position().left > topTabsBoxWidth || tabLi.position().left+topTabsBoxWidth > topTabsWidth){
@@ -214,7 +214,7 @@ layui.define(["element","jquery"],function(exports){
     }
 
     //标签页点击
-    $("body").on("click",".top_tab li",function(){
+    $("body").on("click",".layadmin-tab-pages li",function(){
         //切换后获取当前窗口的内容
         var curmenu = '';
         var menu = JSON.parse(window.sessionStorage.getItem("menu"));
@@ -239,7 +239,7 @@ layui.define(["element","jquery"],function(exports){
     })
 
     //删除tab
-    $("body").on("click",".top_tab li i.layui-tab-close",function(){
+    $("body").on("click",".layadmin-tab-pages li i.layui-tab-close",function(){
         //删除tab后重置session中的menu和curmenu
         liIndex = $(this).parent("li").index();
         var menu = JSON.parse(window.sessionStorage.getItem("menu"));
