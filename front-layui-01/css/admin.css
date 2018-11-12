@@ -1,0 +1,42 @@
+.layadmin-pagetabs, .layui-layout-admin .layui-body,
+.layui-layout-admin .layui-footer,
+.layui-layout-admin .layui-layout-left {
+    left: 220px;
+}
+
+.layui-layout-admin > .layui-side {
+    width: 220px;
+    top: 0;
+    z-index: 1001;
+}
+
+.layui-layout-admin > .layui-side .layui-logo,
+.layui-layout-admin > .layui-header,
+.layui-layout-admin > .layui-header .layui-nav .layui-nav-item a {
+    height: 50px;
+}
+
+.layui-layout-admin > .layui-header .layui-nav a{
+    line-height: 50px;
+}
+
+.layui-layout-admin > .layui-side .layui-logo {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1002;
+    width: 220px;
+    height: 49px;
+}
+
+.layui-layout-admin > .layui-side .layui-nav {
+    width: 220px;
+    margin-top: 50px;
+    background: 0 0;
+}
+
+.layui-nav .layui-nav-item > a {color: #fff;}
+.layui-nav .layui-nav-item > a cite { padding-left: 5px; }
+.layui-nav .layui-nav-child a:hover,
+.layui-nav .layui-nav-child a:hover { color:#fff; background-color:#5FB878; }
+
