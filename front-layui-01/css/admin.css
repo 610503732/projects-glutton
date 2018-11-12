@@ -20,6 +20,12 @@
     line-height: 50px;
 }
 
+.layui-layout-admin > .layui-header .layui-nav .layui-nav-bar {
+    top:0px !important;
+    height: 2px;
+    background-color:rgba(255, 255, 255,0.7);
+}
+
 .layui-layout-admin > .layui-side .layui-logo {
     position: fixed;
     left: 0;
@@ -34,6 +40,36 @@
     margin-top: 50px;
     background: 0 0;
 }
+
+.layui-layout-admin .layui-layout-left { padding: 0 10px; }
+
+
+.layui-layout-admin > .layadmin-pagetabs {
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+    position: fixed;
+    top: 50px;
+    right: 0;
+    z-index: 999;
+}
+.layui-layout-admin >  .layadmin-pagetabs .layui-icon-next { right: 40px; }
+.layui-layout-admin >  .layadmin-pagetabs .layadmin-tabs-control {
+    position: absolute;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+
+
+
 
 .layui-nav .layui-nav-item > a {color: #fff;}
 .layui-nav .layui-nav-item > a cite { padding-left: 5px; }
