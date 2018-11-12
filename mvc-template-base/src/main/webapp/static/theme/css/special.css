@@ -37,6 +37,8 @@
 .layadmin-side-right-body .layadmin-container { padding-right: 138px; height: 40px; border-bottom: 1px solid #e2e2e2; }
         /** 标签页 **/
 .layadmin-side-right-body .layadmin-tab-pages{padding-right:138px; height:40px; border-bottom:1px solid #e2e2e2;position: absolute; border-bottom:none;}
+.layadmin-side-right-body .layadmin-tab-pages  .layui-this {background-color: #1AA094; color: #fff;}
+.layadmin-side-right-body .layadmin-tab-pages  .layui-this:after{border: none}
         /*多窗口页面操作下拉*/
 .layadmin-side-right-body .layadmin-tab-ctrls{ position:absolute; right:0; background-color:#fff !important; color:#000; border-left:1px solid #e2e2e2; border-bottom:1px solid #e2e2e2; }
 .layadmin-side-right-body .layadmin-tab-ctrls .layui-nav-item{ line-height:40px; }

@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="static/theme/css/common.css" media="all" />
     <link rel="stylesheet" href="static/theme/css/special.css" media="all" />
     <link rel="stylesheet" href="static/theme/css/transition.css" media="all" />
+    <link rel="stylesheet" href="static/theme/css/overall.css" media="all" />
     <%--<link rel="stylesheet" href="static/theme/css/main.css" media="all" />--%>
 </head>
 <style type="text/css">
@@ -149,8 +150,7 @@
             //隐藏左侧导航
             $(".layadmin-menu-toggle").click(function(){
                 $(".layui-layout-admin").toggleClass("layadmin-menu-toggle-show");
-                //渲染顶部窗口
-                tab.tabMove();
+
             })
 
 
@@ -207,8 +207,6 @@
                 }else{
                     layer.msg("没有可以关闭的窗口了@_@");
                 }
-                //渲染顶部窗口
-                tab.tabMove();
             })
             //关闭全部
             $(".closePageAll").on("click",function(){
@@ -224,8 +222,7 @@
                 }else{
                     layer.msg("没有可以关闭的窗口了@_@");
                 }
-                //渲染顶部窗口
-                tab.tabMove();
+
             })
 
 
@@ -267,8 +264,7 @@
                         element.tabChange("bodyTab",menu[menu.length-1].layId);
                     }
                 }
-                //渲染顶部窗口
-                tab.tabMove();
+
             }
 
         };
