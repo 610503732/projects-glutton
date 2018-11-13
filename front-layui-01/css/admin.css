@@ -65,8 +65,20 @@
     cursor: pointer;
 }
 
+.layadmin-pagetabs .layui-icon-down {
+    right: 0;
+}
 
 
+.layadmin-pagetabs .layadmin-tabs-select.layui-nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background: 0 0;
+}
 
 
 

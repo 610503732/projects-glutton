@@ -1,0 +1,17 @@
+
+/* 侧边栏主题 */
+.layadmin-bg-black .layadmin-side-box,
+.layadmin-bg-black .layadmin-side-box .layui-logo
+.layadmin-bg-black .layadmin-side-box .layui-nav,
+.layadmin-bg-black .layadmin-side-box .layui-nav .layui-nav-item {background-color: #03152A !important;}
+
+.layadmin-bg-black .layadmin-pagetabs-box { box-shadow: 0 1px 2px 0 rgba(0,0,0,.1); }
+
+/* 分页标签栏 */
+.layadmin-bg-black .layadmin-pagetabs-box .layui-tab-title li:after,
+.layadmin-bg-black .layadmin-pagetabs-box .layui-tab-title li.layui-this:after {
+    background-color: #5FB878;
+}
+
+/* 正文内容 */
+.layadmin-body-box.layui-body {background-color:#F2F2F2; }

@@ -1,0 +1,140 @@
+
+/*  整体盒子 */
+.layadmin-box {}
+
+/* 头部盒子 */
+.layadmin-header-box{}
+.layadmin-header-box .layui-nav .layui-nav-item {
+    line-height: 50px;
+}
+
+
+/* 侧边栏盒子 */
+.layadmin-side-box.layui-side,
+.layadmin-side-box.layui-side .layui-nav .layui-nav-item{
+    width: 220px;
+}
+.layadmin-side-box.layui-side{
+    position: fixed;
+    top: 0;
+    z-index: 1001;
+}
+.layadmin-side-box .layui-logo{
+    height: 50px;
+}
+.layadmin-side-box .layui-nav {
+    top:50px;
+}
+
+
+/* 分页标签盒子 */
+.layadmin-pagetabs-box{
+    height: 40px;
+    position: fixed;
+    top: 50px;
+    right: 0;
+    z-index: 999;
+    padding: 0 80px 0 40px;
+}
+.layadmin-pagetabs-box .layadmin-tabs-control {
+    position: absolute;
+    top:0;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+.layadmin-pagetabs-box .layui-icon-prev {left: 0px;}
+.layadmin-pagetabs-box .layui-icon-next {right: 40px;}
+.layadmin-pagetabs-box .layui-icon-down {right: 0px;}
+.layadmin-pagetabs-box .layui-icon-down .layui-nav {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background: 0 0;
+}
+.layadmin-pagetabs-box .layui-icon-down .layui-nav .layui-nav-item a {
+    height: 40px;
+}
+.layadmin-pagetabs-box .layui-icon-down .layui-nav .layui-nav-child {
+    top: 40px;
+    left: auto;
+    right: 0;
+}
+.layadmin-pagetabs-box .layadmin-tabs-content.layui-tab{
+    margin: 0;
+    overflow: hidden;
+}
+.layadmin-pagetabs-box .layui-tab-title {border: none;}
+.layadmin-pagetabs-box .layui-tab-title li {min-width: 0;height: 40px;border: none;border-right: 1px solid white; }
+.layadmin-pagetabs-box .layui-tab-title li:first-child .layui-tab-close{
+    display: none;
+}
+.layadmin-pagetabs-box .layui-tab-title li:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    border-radius: 0;
+}
+
+.layadmin-pagetabs-box .layui-tab-title li:hover:after {
+    width: 100%;
+}
+.layadmin-pagetabs-box .layui-tab-title li.layui-this:after {
+    width: 100%;
+    border: none;
+    height: 2px;
+}
+
+/*.layadmin-pagetabs-box .layui-tab-title li after,*/
+/*.layadmin-pagetabs-box .layui-tab-title li.layui-this:after{*/
+    /*top: 0px;*/
+    /*left:0;*/
+    /*height: 2px;*/
+/*}*/
+
+/*.layadmin-pagetabs-box .layui-tab-title li:hover:after{*/
+    /*width: 100%;*/
+/*}*/
+
+/* 内容正文盒子 */
+.layadmin-body-box.layui-body{top:90px;}
+.layadmin-body-box .layadmin-tabsbody-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+.layadmin-body-box .layadmin-tabsbody-item .layadmin-iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+/* 页尾盒子 */
+.layadmin-footer-box{}
+
+
+
+.layadmin-pagetabs-box,
+.layadmin-body-box,
+.layadmin-footer-box{
+    left: 220px;
+}
+
+.layadmin-header-box {
+    height: 50px;
+}

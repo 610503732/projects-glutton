@@ -12,13 +12,16 @@
 	<meta name="format-detection" content="telephone=no">
 	<link rel="icon" href="favicon.ico">
 	<link rel="stylesheet" href="layui/css/layui.css" media="all" />
-	<link rel="stylesheet" href="css/admin.css" media="all" />
-
+    <link rel="stylesheet" href="css/layout.css" media="all" />
+	<link rel="stylesheet" href="css/element.css" media="all" />
+	<link rel="stylesheet" href="css/overall.css" media="all" />
+	<link rel="stylesheet" href="css/animation.css" media="all" />
+	<link rel="stylesheet" href="css/theme.css" media="all" />
 </head>
 <body >
-	<div class="layui-layout layui-layout-admin">
+	<div class="layui-layout layui-layout-admin layadmin-bg-black layadmin-box">
 		<!-- 顶部 -->
-		<div class="layui-header">
+		<div class="layui-header layadmin-header-box">
 			<ul class="layui-nav layui-layout-left">
 				<li class="layui-nav-item" lay-unselect="">
 					<a href="javascript:;" title="侧边伸缩">
@@ -62,39 +65,37 @@
 		</div>
 
 		<!-- 左侧导航 -->
-		<div class="layui-side layui-bg-black">
-			<div class="layui-side-scroll">
-				<div class="layui-logo text-center" lay-href="home/console.html">
-					<span>layuiAdmin</span>
-				</div>
-				<ul class="layui-nav layui-nav-tree" lay-shrink="all" lay-filter="layadmin-system-side-menu">
-					<li data-name="home" class="layui-nav-item">
-						<a href="javascript:;" lay-tips="主页" lay-direction="2">
-							<i class="layui-icon layui-icon-home"></i>
-							<cite>主页</cite>
-							<span class="layui-nav-more"></span></a>
-						<dl class="layui-nav-child">
-							<dd data-name="console" class="">
-								<a lay-href="home/console.html">控制台</a>
-							</dd>
-							<dd data-name="console">
-								<a lay-href="home/homepage1.html">主页一</a>
-							</dd>
-							<dd data-name="console">
-								<a lay-href="home/homepage2.html">主页二</a>
-							</dd>
-						</dl>
-					</li>
-				</ul>
+		<div class="layui-side  layadmin-side-box">
+			<div class="layui-logo text-center" lay-href="home/console.html">
+				<span>LAYUI 后台系统</span>
 			</div>
+			<ul class="layui-nav layui-nav-tree" lay-shrink="all" lay-filter="layadmin-side-menu">
+				<li data-name="home" class="layui-nav-item">
+					<a href="javascript:;" lay-tips="主页" lay-direction="2">
+						<i class="layui-icon layui-icon-home"></i>
+						<cite>主页</cite>
+						<span class="layui-nav-more"></span></a>
+					<dl class="layui-nav-child">
+						<dd data-name="console" class="">
+							<a lay-href="home/console.html">控制台</a>
+						</dd>
+						<dd data-name="console">
+							<a lay-href="home/homepage1.html">主页一</a>
+						</dd>
+						<dd data-name="console">
+							<a lay-href="home/homepage2.html">主页二</a>
+						</dd>
+					</dl>
+				</li>
+			</ul>
 		</div>
 
 		<!-- 标签页 -->
-		<div class="layadmin-pagetabs" >
-			<div class="layui-icon layadmin-tabs-control layui-icon-prev" layadmin-event="leftPage"></div>
-			<div class="layui-icon layadmin-tabs-control layui-icon-next" layadmin-event="rightPage"></div>
-			<div class="layui-icon layadmin-tabs-control layui-icon-down">
-				<ul class="layui-nav layadmin-tabs-select" lay-filter="layadmin-pagetabs-nav">
+		<div class="layadmin-pagetabs-box" >
+			<div class="layui-icon layui-icon-prev layadmin-tabs-control " layadmin-event="leftPage"></div>
+			<div class="layui-icon layui-icon-next layadmin-tabs-control " layadmin-event="rightPage"></div>
+			<div class="layui-icon layui-icon-down layadmin-tabs-control">
+				<ul class="layui-nav" lay-filter="layadmin-pagetabs-nav">
 					<li class="layui-nav-item" lay-unselect="">
 						<a href="javascript:;"><span class="layui-nav-more"></span></a>
 						<dl class="layui-nav-child layui-anim-fadein layui-anim layui-anim-upbit">
@@ -105,20 +106,23 @@
 					</li>
 				</ul>
 			</div>
-			<!--<div class="layui-tab" lay-unauto="" lay-allowclose="true" lay-filter="layadmin-layout-tabs">-->
-				<!--<ul class="layui-tab-title" id="LAY_app_tabsheader">-->
-					<!--<li lay-id="home/console.html" lay-attr="home/console.html" class="layui-this"><i class="layui-icon layui-icon-home"></i><i class="layui-icon layui-unselect layui-tab-close">ဆ</i></li>-->
-				<!--</ul>-->
-			<!--</div>-->
+			<div class="layui-tab layadmin-tabs-content" lay-unauto="" lay-allowclose="true" lay-filter="layadmin-layout-tabs">
+				<ul class="layui-tab-title" id="LAY_app_tabsheader">
+					<li lay-id="home/console.html" lay-attr="home/console.html" ><i class="layui-icon layui-icon-home"></i></li>
+					<li lay-id="home/homepage2.html" lay-attr="home/homepage2.html" class="layui-this"><span>主页二</span><i class="layui-icon layui-unselect layui-tab-close">ဆ</i></li>
+				</ul>
+			</div>
 		</div>
 
 		<!-- 右侧内容 -->
-		<!--<div class="layui-body layui-form">-->
+		<div class="layui-body layui-form layadmin-body-box">
+			<div class="layadmin-tabsbody-item layui-show">
+				<iframe src="home/console.html" frameborder="0" class="layadmin-iframe"></iframe>
+			</div>
 
-
-		<!--</div>-->
+		</div>
 		<!-- 底部 -->
-		<div class="layui-footer">
+		<div class="layui-footer layadmin-footer-box">
 			<p>copyright @2017 </p>
 		</div>
 	</div>

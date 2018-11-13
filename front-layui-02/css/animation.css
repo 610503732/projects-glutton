@@ -1,0 +1,4 @@
+.layadmin-pagetabs-box .layui-tab-title li:after {
+    transition: all .3s;
+    -webkit-transition: all .3s;
+}
