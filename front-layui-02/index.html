@@ -69,25 +69,7 @@
 			<div class="layui-logo text-center" lay-href="home/console.html">
 				<span>LAYUI 后台系统</span>
 			</div>
-			<ul class="layui-nav layui-nav-tree" lay-shrink="all" lay-filter="layadmin-side-menu">
-				<li data-name="home" class="layui-nav-item">
-					<a href="javascript:;" lay-tips="主页" lay-direction="2">
-						<i class="layui-icon layui-icon-home"></i>
-						<cite>主页</cite>
-						<span class="layui-nav-more"></span></a>
-					<dl class="layui-nav-child">
-						<dd data-name="console" class="">
-							<a lay-href="home/console.html">控制台</a>
-						</dd>
-						<dd data-name="console">
-							<a lay-href="home/homepage1.html">主页一</a>
-						</dd>
-						<dd data-name="console">
-							<a lay-href="home/homepage2.html">主页二</a>
-						</dd>
-					</dl>
-				</li>
-			</ul>
+			<div id="layadmin-menu-container"></div>
 		</div>
 
 		<!-- 标签页 -->
@@ -108,8 +90,10 @@
 			</div>
 			<div class="layui-tab layadmin-tabs-content" lay-unauto="" lay-allowclose="true" lay-filter="layadmin-layout-tabs">
 				<ul class="layui-tab-title" id="LAY_app_tabsheader">
-					<li lay-id="home/console.html" lay-attr="home/console.html" ><i class="layui-icon layui-icon-home"></i></li>
-					<li lay-id="home/homepage2.html" lay-attr="home/homepage2.html" class="layui-this"><span>主页二</span><i class="layui-icon layui-unselect layui-tab-close">ဆ</i></li>
+					<li lay-id="1542103030623" class="layui-this">
+						<i class="layui-icon layui-icon-home"></i>
+						<cite>后台首页</cite>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -117,7 +101,7 @@
 		<!-- 右侧内容 -->
 		<div class="layui-body layui-form layadmin-body-box">
 			<div class="layadmin-tabsbody-item layui-show">
-				<iframe src="home/console.html" frameborder="0" class="layadmin-iframe"></iframe>
+				<iframe src="./pages/welcome/index.html" frameborder="0" class="layadmin-iframe"></iframe>
 			</div>
 
 		</div>
@@ -130,10 +114,22 @@
 	<script type="text/javascript" src="layui/layui.js"></script>
 	<script type="text/javascript"  >
         layui.config({
-            base : "static/theme/js/"
-        }).use(['form','element','layer','jquery'],function(){
+            base : "js/"
+        }).use(['nav','tab','form','element','layer','jquery'],function(){
+		var
+            $ = layui.jquery,
+            nav = layui.nav({
+                container : "#layadmin-menu-container",
+                url:"json/navs.json"
+            }),
+			tab = layui.tab({
+                container : "#LAY_app_tabsheader",
+				tabFilter:"layadmin-layout-tabs"
+			}),
+            element = layui.element,
+            layer = layui.layer;
 
-
+            nav.setTab(tab);
 
         });
 	</script>

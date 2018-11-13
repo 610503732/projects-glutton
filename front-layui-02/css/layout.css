@@ -14,6 +14,13 @@
 .layadmin-side-box.layui-side .layui-nav .layui-nav-item{
     width: 220px;
 }
+.layadmin-side-box.layui-side .layui-nav .layui-nav-item>a {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.layadmin-side-box.layui-side .layui-nav:hover{
+    cursor: pointer;
+}
 .layadmin-side-box.layui-side{
     position: fixed;
     top: 0;
@@ -138,3 +145,4 @@
 .layadmin-header-box {
     height: 50px;
 }
+
