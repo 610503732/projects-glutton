@@ -1,0 +1,74 @@
+/** 盒子布局 **/
+
+
+/** 公用 **/
+
+.layui-layout-admin .layui-body{
+    left: 220px;
+}
+
+/** 头部盒子 **/
+.layui-layout-admin .layui-header .layui-nav .layui-nav-bar{ top:60px !important; background-color:rgba(0,0,0,0.7) }
+
+
+/* 侧边栏盒子 */
+.layui-layout-admin .layui-side {  width: 220px; }
+.layui-layout-admin .layui-side  .layadmin-user-photo{width: 200px; height: 120px; padding-top: 15px; padding-bottom: 5px;}
+.layui-layout-admin .layui-side  .layadmin-user-photo a.img{ display: block; width: 76px; height: 76px; margin: 0 auto; margin-bottom: 15px;}
+.layui-layout-admin .layui-side  .layadmin-user-photo a.img img{ display: block; border: none; width: 100%; height: 100%; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%; border: 4px solid #44576b;}
+.layui-layout-admin .layui-side  .layadmin-user-photo p{ display: block; width: 100%; height: 25px; color: #ffffff; text-align: center; font-size: 12px; white-space: nowrap;line-height: 25px; overflow: hidden;}
+
+/* 正文盒子 */
+.layui-layout-admin  .layui-body{
+    bottom: 0px;
+}
+.layui-layout-admin  .layui-body .layui-tab{
+    margin-top: 0;
+}
+
+
+.layui-layout-admin .layui-body .layui-tab .layui-tab-title li{ border-right: 1px solid white;}
+.layui-layout-admin .layui-body .layui-tab .layui-tab-title li.layui-this:after {
+    top: 0px;
+    border-bottom-width: 3px ;
+}
+
+.layui-layout-admin .layui-body .layui-tab  .layadmin-tab-ctrls{ position:absolute; top:0px; right:0; background-color:#fff !important; color:#000; border-left:1px solid #e2e2e2; border-bottom:1px solid #e2e2e2; }
+.layui-layout-admin .layui-body .layui-tab  .layadmin-tab-ctrls .layui-nav-item{ line-height:40px; }
+.layui-layout-admin .layui-body .layui-tab  .layadmin-tab-ctrls .layui-nav-child{ top:42px; left:-12px; }
+.layui-layout-admin .layui-body .layui-tab  .layadmin-tab-ctrls .layui-nav-bar{ display:none; }
+.layui-layout-admin .layui-body .layui-tab  .layadmin-tab-ctrls .layui-icon{ position:absolute; top:1px; left:-1px; }
+.layui-layout-admin .layui-body .layui-tab  .layadmin-tab-ctrls  .layui-nav-child a > i.layui-icon{
+    position: unset;
+}
+
+.layui-layout-admin .layui-body .layui-tab .layui-tab-content .layui-tab-item{
+    height: 100%;
+}
+
+.layui-layout-admin .layui-body .layui-tab .layui-tab-content .layui-tab-item iframe {
+    width: 100%;
+    height: 100%;
+}
+.layui-layout-admin  .layui-body .layui-tab .layui-tab-content{
+    position: absolute;
+    top: 41px;
+    right: 0px;
+    left: 0;
+    bottom: 44px;
+    padding-right: 0;
+}
+
+.layui-layout-admin .layui-footer {
+    position: fixed;
+    left: 222px;
+    z-index: 998;
+}
+
+
+
+
+
+
+
+

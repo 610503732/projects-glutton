@@ -16,6 +16,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="admin-base" target="1.7" />
       <module name="cloud-study-api" target="1.8" />
       <module name="cloud-study-consumer" target="1.8" />
       <module name="cloud-study-controller" target="1.8" />
