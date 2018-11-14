@@ -36,7 +36,7 @@
 
 /* 分页标签盒子 */
 .layadmin-pagetabs-box{
-    height: 40px;
+    height: 100%;
     position: fixed;
     top: 50px;
     right: 0;
@@ -72,10 +72,25 @@
     right: 0;
 }
 .layadmin-pagetabs-box .layadmin-tabs-content.layui-tab{
+    height: 100%;
+    width: 100%;
     margin: 0;
     overflow: hidden;
+    position: absolute;
+    left: 0px;
 }
-.layadmin-pagetabs-box .layui-tab-title {border: none;}
+.layadmin-pagetabs-box .layadmin-tabs-content.layui-tab .layui-tab-content{
+    height: 100%;
+}
+
+.layadmin-pagetabs-box .layadmin-tabs-content.layui-tab .layui-tab-content .layui-tab-item iframe {
+    width: 100%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+}
+
+.layadmin-pagetabs-box .layui-tab-title {border: none;padding-left: 40px;}
 .layadmin-pagetabs-box .layui-tab-title li {min-width: 0;height: 40px;border: none;border-right: 1px solid white; }
 .layadmin-pagetabs-box .layui-tab-title li:first-child .layui-tab-close{
     display: none;

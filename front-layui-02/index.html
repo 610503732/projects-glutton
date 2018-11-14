@@ -95,17 +95,15 @@
 						<cite>后台首页</cite>
 					</li>
 				</ul>
+				<div class="layui-tab-content">
+					<div class="layui-tab-item layui-show">
+						<iframe src="pages/welcome/index.html"  frameborder="0" class="layadmin-iframe"></iframe>
+					</div>
+				</div>
 			</div>
-		</div>
-
-		<!-- 右侧内容 -->
-		<div class="layui-body layui-form layadmin-body-box" id="LAY_app_body">
-			<div class="layadmin-tabsbody-item layui-show">
-				<iframe src="./pages/welcome/index.html" frameborder="0" class="layadmin-iframe"></iframe>
-			</div>
-
 		</div>
 		<!-- 底部 -->
+
 		<div class="layui-footer layadmin-footer-box">
 			<p>copyright @2017 </p>
 		</div>
@@ -118,25 +116,26 @@
         }).use(['nav','tab','form','element','layer','jquery'],function(){
 		var
             $ = layui.jquery,
+            tab = layui.tab({
+                container : "#LAY_app_tabsheader",
+                bodyContainer:"#LAY_app_body",
+                tabFilter:"layadmin-layout-tabs"
+            }),
             nav = layui.nav({
                 container : "#layadmin-menu-container",
                 url:"json/navs.json"
             }),
-			tab = layui.tab({
-                container : "#LAY_app_tabsheader",
-				bodyContainer:"#LAY_app_body",
-				tabFilter:"layadmin-layout-tabs"
-			}),
+
             element = layui.element,
             layer = layui.layer;
 
             nav.setTab(tab);
-
-            //一些事件监听
-            element.on('tab(layadmin-layout-tabs)', function(data,a,b,c){
-                console.log(data);
-            });
-
+        //
+         //    //一些事件监听
+         //    element.on('tab(layadmin-layout-tabs)', function(data,a,b,c){
+         //        console.log(data);
+         //    });
+        //
 
             // element.tab({
             //     headerElem: '#LAY_app_tabsheader>li' //指定tab头元素项

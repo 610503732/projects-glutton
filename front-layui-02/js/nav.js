@@ -2,7 +2,7 @@
  * layui 中 拓展的模块
  */
 
-layui.define(["element","jquery"],function(exports){
+layui.define(["element","tab","jquery"],function(exports){
     var element = layui.element,
         $ = layui.jquery,
         //session 缓存中数据的字典

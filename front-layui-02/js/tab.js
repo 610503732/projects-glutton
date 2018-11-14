@@ -13,7 +13,6 @@ layui.define(["element","jquery"],function(exports){
         Tab = function(){
             this.tabConfig = {
                 container : undefined,
-                bodyContainer:undefined,
                 openTabNum : 10,  //最大可打开窗口数量，默认 10
                 tabFilter : "bodyTab",  //添加窗口的filter，默认 bodyTab
 
@@ -31,36 +30,20 @@ layui.define(["element","jquery"],function(exports){
     };
 
     /**
-     * 添加选项和选项卡
-     * @param _options
+     * 初始化
      */
-    _prototype.addNewItemAndBody = function(_options){
-
+    _prototype.init = function(){
         var
-            tabs = [],
             _this = this,
-            _config = _this.tabConfig,
-            tabTitle = ""
+            _config = _this.tabConfig
         ;
 
-        //添加选项
-        element.tabAdd(_config.tabFilter, {
-            title : _options.title,
-            id : _options.id
+        //删除tab
+        $(_config.container).on("click"," li i.layui-tab-close",function(){
+            element.tabDelete(_config.tabFilter,$(this).parent("li").attr("lay-id")).init();
         })
 
-        //清除展示的
-        $(_config.bodyContainer + " .layui-show").removeClass("layui-show");
-        //添加选项卡
-        $(_config.bodyContainer ).append(_options.content );
-        element.init();
-        //重新绑定选项和选项卡关系
-        element.tab({
-            headerElem: _config.container + '>li' //指定tab头元素项
-            ,bodyElem:   _config.bodyContainer + '>.layadmin-tabsbody-item ' //指定tab主体元素项
-        });
-
-
+        return _this ;
     }
 
 
@@ -111,17 +94,11 @@ layui.define(["element","jquery"],function(exports){
             tabIdIndex++;
             tabTitle += '<cite>'+$item.find("cite").text()+'</cite>';
             tabTitle += '<i class="layui-icon layui-unselect layui-tab-close" data-id="'+ tabIdIndex +'">&#x1006;</i>';
-
-            _this.addNewItemAndBody({
+            element.tabAdd(_config.tabFilter, {
                 title : tabTitle,
-                content :(
-                    '<div class="layadmin-tabsbody-item layui-show">' +
-                    "<iframe src='"+ $item.attr("data-url") +"' data-id='"+ tabIdIndex +"' frameborder='0' class='layadmin-iframe'></frame>" +
-                    '</div>'
-                ),
+                content :"<iframe src='"+ $item.attr("data-url") +"' data-id='"+ tabIdIndex +"' frameborder='0' class='layadmin-iframe'></frame>",
                 id : new Date().getTime()
             })
-
             //当前窗口内容
             var curmenu = {
                 "icon" : $item.find("i.layui-icon").attr("data-icon"),
@@ -136,6 +113,7 @@ layui.define(["element","jquery"],function(exports){
             element.tabChange(_config.tabFilter, _this.getLayId($item.find("cite").text()));
 
         }
+
     }
 
     //通过title获取lay-id
@@ -174,9 +152,11 @@ layui.define(["element","jquery"],function(exports){
     }
 
 
+
+
     Tab.prototype = _prototype ;
     //发布模块
     exports("tab",function(option){
-        return Tab.newTab().set(option);
+        return Tab.newTab().set(option).init();
     });
 })
