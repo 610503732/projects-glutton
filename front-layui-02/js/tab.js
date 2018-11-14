@@ -13,6 +13,7 @@ layui.define(["element","jquery"],function(exports){
         Tab = function(){
             this.tabConfig = {
                 container : undefined,
+                bodyContainer:undefined,
                 openTabNum : 10,  //最大可打开窗口数量，默认 10
                 tabFilter : "bodyTab",  //添加窗口的filter，默认 bodyTab
 
@@ -28,6 +29,39 @@ layui.define(["element","jquery"],function(exports){
         $.extend(true, _this.tabConfig, option);
         return _this;
     };
+
+    /**
+     * 添加选项和选项卡
+     * @param _options
+     */
+    _prototype.addNewItemAndBody = function(_options){
+
+        var
+            tabs = [],
+            _this = this,
+            _config = _this.tabConfig,
+            tabTitle = ""
+        ;
+
+        //添加选项
+        element.tabAdd(_config.tabFilter, {
+            title : _options.title,
+            id : _options.id
+        })
+
+        //清除展示的
+        $(_config.bodyContainer + " .layui-show").removeClass("layui-show");
+        //添加选项卡
+        $(_config.bodyContainer ).append(_options.content );
+        element.init();
+        //重新绑定选项和选项卡关系
+        element.tab({
+            headerElem: _config.container + '>li' //指定tab头元素项
+            ,bodyElem:   _config.bodyContainer + '>.layadmin-tabsbody-item ' //指定tab主体元素项
+        });
+
+
+    }
 
 
     /**
@@ -77,11 +111,17 @@ layui.define(["element","jquery"],function(exports){
             tabIdIndex++;
             tabTitle += '<cite>'+$item.find("cite").text()+'</cite>';
             tabTitle += '<i class="layui-icon layui-unselect layui-tab-close" data-id="'+ tabIdIndex +'">&#x1006;</i>';
-            element.tabAdd(_config.tabFilter, {
+
+            _this.addNewItemAndBody({
                 title : tabTitle,
-                content :"<iframe src='"+ $item.attr("data-url") +"' data-id='"+ tabIdIndex +"'></frame>",
+                content :(
+                    '<div class="layadmin-tabsbody-item layui-show">' +
+                    "<iframe src='"+ $item.attr("data-url") +"' data-id='"+ tabIdIndex +"' frameborder='0' class='layadmin-iframe'></frame>" +
+                    '</div>'
+                ),
                 id : new Date().getTime()
             })
+
             //当前窗口内容
             var curmenu = {
                 "icon" : $item.find("i.layui-icon").attr("data-icon"),

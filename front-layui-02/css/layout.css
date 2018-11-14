@@ -119,6 +119,7 @@
     left: 0;
     right: 0;
     overflow: hidden;
+    display: none;
 }
 .layadmin-body-box .layadmin-tabsbody-item .layadmin-iframe {
     position: absolute;
