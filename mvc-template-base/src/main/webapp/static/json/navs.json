@@ -1,39 +1,40 @@
 [{
-	"title" : "后台首页",
-	"icon" : "icon-computer",
-	"href" : "page/main.html",
+	"id" : 10000,
+	"title" : "主页",
+	"icon" : "layui-icon layui-icon-home",
+	"url" : "",
 	"spread" : false
 },{
-	"title" : "文章列表",
-	"icon" : "icon-text",
-	"href" : "page/news/newsList.html",
-	"spread" : false
-},{
-	"title" : "友情链接",
-	"icon" : "&#xe64c;",
-	"href" : "page/links/linksList.html",
-	"spread" : false
-},{
-	"title" : "系统基本参数",
-	"icon" : "&#xe631;",
-	"href" : "page/systemParameter/systemParameter.html",
-	"spread" : false
-},{
-	"title" : "其他页面",
-	"icon" : "&#xe630;",
-	"href" : "",
+	"id" : 20000,
+	"title" : "组件",
+	"icon" : "layui-icon layui-icon-component",
+	"url" : "",
 	"spread" : false,
 	"children" : [
 		{
-			"title" : "404页面",
-			"icon" : "&#xe61c;",
+			"id" : 20100,
+			"title" : "面板",
 			"href" : "page/404.html",
 			"spread" : false
 		},
 		{
-			"title" : "登录",
-			"icon" : "&#xe609;",
+			"id" : 20200,
+			"title" : "按钮",
 			"href" : "page/login/login.html",
+			"spread" : false
+		}
+	]
+},{
+	"id" : 30000,
+	"title" : "设置",
+	"icon" : "layui-icon layui-icon-set-fill",
+	"url" : "",
+	"spread" : false,
+	"children" : [
+		{
+			"id" : 30100,
+			"title" : "登录",
+			"href" : "page/404.html",
 			"spread" : false,
 			"target" : "_blank"
 		}

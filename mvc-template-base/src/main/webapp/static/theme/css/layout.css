@@ -18,6 +18,10 @@
 .layui-layout-admin .layui-side  .layadmin-user-photo a.img{ display: block; width: 76px; height: 76px; margin: 0 auto; margin-bottom: 15px;}
 .layui-layout-admin .layui-side  .layadmin-user-photo a.img img{ display: block; border: none; width: 100%; height: 100%; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%; border: 4px solid #44576b;}
 .layui-layout-admin .layui-side  .layadmin-user-photo p{ display: block; width: 100%; height: 25px; color: #ffffff; text-align: center; font-size: 12px; white-space: nowrap;line-height: 25px; overflow: hidden;}
+.layui-layout-admin .layui-side  .layui-nav.layui-nav-tree .layui-nav-item > a{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
 
 /* 正文盒子 */
 .layui-layout-admin  .layui-body{
@@ -28,7 +32,7 @@
 }
 
 
-.layui-layout-admin .layui-body .layui-tab .layui-tab-title li{ border-right: 1px solid white;}
+.layui-layout-admin .layui-body .layui-tab .layui-tab-title li{ border-right: 1px solid white;height: 40px;}
 .layui-layout-admin .layui-body .layui-tab .layui-tab-title li.layui-this:after {
     top: 0px;
     border-bottom-width: 3px ;

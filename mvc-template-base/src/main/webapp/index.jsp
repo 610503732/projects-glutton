@@ -45,7 +45,7 @@
                     </a>
                 </li>
                 <li class="layui-nav-item" lay-unselect="">
-                    <a href="javascript:;" layadmin-event="refresh" title="刷新">
+                    <a href="javascript:;" layadmin-event="refresh" title="清除缓存">
                         <i class="layui-icon layui-icon-refresh-3"></i>
                     </a>
                 </li>
@@ -84,45 +84,47 @@
                     <p>你好！<span >用户XXX</span>, 欢迎登录</p>
                 </div>
                 <div id="LAY_nav_menu" class="cursor-pointer">
-                    <ul class="layui-nav layui-nav-tree" style="height: 759px;">
-                        <li class="layui-nav-item">
-                            <a data-url="page/main.html">
-                                <i class="layui-icon" data-icon=""></i>
-                                <cite>后台首页</cite>
-                            </a>
-                        </li>
-                        <li class="layui-nav-item layui-this">
-                            <a data-url="page/news/newsList.html">
-                                <i class="seraph icon-text" data-icon="icon-text">
-                                </i><cite>文章列表</cite>
-                            </a>
-                        </li>
-                        <li class="layui-nav-item">
-                            <a data-url="page/img/images.html">
-                                <i class="layui-icon" data-icon="">
-                                </i><cite>图片管理</cite></a>
-                        </li>
-                        <li class="layui-nav-item">
-                            <a>
-                                <i class="layui-icon" data-icon=""></i>
-                                <cite>其他页面</cite><span class="layui-nav-more"></span>
-                            </a>
-                            <dl class="layui-nav-child">
-                                <dd>
-                                    <a data-url="page/404.html">
-                                        <i class="layui-icon" data-icon=""></i>
-                                        <cite>404页面</cite>
-                                    </a>
-                                </dd>
-                                <dd>
-                                    <a data-url="page/login/login.html" target="_blank">
-                                        <i class="layui-icon" data-icon=""></i>
-                                        <cite>登录</cite>
-                                    </a>
-                                </dd>
-                            </dl>
-                        </li>
-                    </ul>
+                    <%--<ul class="layui-nav layui-nav-tree">--%>
+                        <%--<li class="layui-nav-item">--%>
+                            <%--<a data-url="page/main.html" data-id="10000">--%>
+                                <%--<i class="layui-icon" data-icon=""></i>--%>
+                                <%--<cite>后台首页</cite>--%>
+                            <%--</a>--%>
+                        <%--</li>--%>
+                        <%--<li class="layui-nav-item layui-this">--%>
+                            <%--<a data-url="page/news/newsList.html" data-id="20000">--%>
+                                <%--<i class="seraph icon-text" data-icon="icon-text">--%>
+                                <%--</i><cite>文章列表</cite>--%>
+                            <%--</a>--%>
+                        <%--</li>--%>
+                        <%--<li class="layui-nav-item">--%>
+                            <%--<a data-url="page/img/images.html" data-id="30000">--%>
+                                <%--<i class="layui-icon" data-icon="">--%>
+                                <%--</i><cite>图片管理</cite>--%>
+                            <%--</a>--%>
+                        <%--</li>--%>
+                        <%--<li class="layui-nav-item">--%>
+                            <%--<a data-id="40000">--%>
+                                <%--<i class="layui-icon" data-icon=""></i>--%>
+                                <%--<cite>其他页面</cite>--%>
+                                <%--<span class="layui-nav-more"></span>--%>
+                            <%--</a>--%>
+                            <%--<dl class="layui-nav-child">--%>
+                                <%--<dd>--%>
+                                    <%--<a data-url="page/404.html"  data-id="40100">--%>
+                                        <%--<i class="layui-icon" data-icon=""></i>--%>
+                                        <%--<cite>404页面</cite>--%>
+                                    <%--</a>--%>
+                                <%--</dd>--%>
+                                <%--<dd>--%>
+                                    <%--<a data-url="page/login/login.html" data-id="40200" data-target="_blank">--%>
+                                        <%--<i class="layui-icon" data-icon=""></i>--%>
+                                        <%--<cite>登录</cite>--%>
+                                    <%--</a>--%>
+                                <%--</dd>--%>
+                            <%--</dl>--%>
+                        <%--</li>--%>
+                    <%--</ul>--%>
 
                 </div>
             </div>
@@ -130,31 +132,22 @@
         <!-- 右侧内容 一个大的 tab -->
         <div class="layui-body overflow-hidden">
             <div class="layui-tab layui-tab-brief" lay-filter="bodyTab">
-                <ul class="layui-tab-title">
-                    <li class="layui-this" lay-id=""><i class="layui-icon layui-icon-home"></i> <cite>后台首页</cite></li>
-                    <li class="" lay-id="1542184788106">
-                        <i class="layui-icon layui-icon-404"></i>
-                        <cite>404</cite>
-                        <!-- close -->
-                        <i class="layui-unselect layui-icon layui-tab-close" data-id="2">ဆ</i>
-                    </li>
+                <ul class="layui-tab-title" id="LAY_app_tabsheader">
+                    <li class="layui-this" lay-id="10000"><i class="layui-icon layui-icon-home"></i> <cite>主页</cite></li>
                 </ul>
                 <ul class="layui-nav layadmin-tab-ctrls">
                     <li class="layui-nav-item">
                         <a href="javascript:;"><i class="layui-icon layui-icon-down"></i> 页面操作</a>
-                        <dl class="layui-nav-child">
-                            <dd><a href="javascript:;" class="refreshThis"><i class="layui-icon layui-icon-refresh"></i> 刷新当前</a></dd>
+                        <dl class="layui-nav-child" id="LAY_tab_ctrls">
+                            <dd><a href="javascript:;" class="refresh refreshThis"><i class="layui-icon layui-icon-refresh"></i> 刷新当前</a></dd>
                             <dd><a href="javascript:;" class="closePageOther"><i class="layui-icon layui-icon-circle-dot"></i> 关闭其他</a></dd>
                             <dd><a href="javascript:;" class="closePageAll"><i class="layui-icon layui-icon-close-fill"></i> 关闭全部</a></dd>
                         </dl>
                     </li>
                 </ul>
-                <div class="layui-tab-content">
+                <div class="layui-tab-content" id="LAY_tab_content">
                     <div class="layui-tab-item layui-show">
                         <iframe src="${ctx}/welcome/index" frameborder="0"></iframe>
-                    </div>
-                    <div class="layui-tab-item ">
-                        <iframe src=""  frameborder="0"></iframe>
                     </div>
                 </div>
             </div>
@@ -169,7 +162,7 @@
 <script type="text/javascript" src="static/theme/layui/layui.js"></script>
 <script type="text/javascript">
 
-    var $,tab,element,layer,appIndex;
+    var $,tab,nav,element,layer,appIndex;
 
     appIndex = (function(window,document){
 
@@ -201,11 +194,74 @@
 
     layui.config({
         base : "static/theme/js/"
-    }).use(['tab','form','element','layer','jquery'],function(){
+    }).use(['tab','nav','form','element','layer','jquery'],function(){
 
-        $ = layui.jquery;
-        element = layui.element;
+        $ = layui.jquery,
+            tab = layui.tab({
+                container : "#LAY_app_tabsheader",
+                tabFilter:"bodyTab"
+            }),
+            nav = layui.nav({
+                container : "#LAY_nav_menu",
+                url:"static/json/navs.json"
+            }),
+        element = layui.element,
         layer = layui.layer;
+
+
+        /**
+         * 菜单点击事件
+         */
+        $("#LAY_nav_menu").on("click",".layui-nav .layui-nav-item a",function(){
+
+            var $item = $(this) ,
+                _menu = {};
+
+            //如果不存在子级
+            if($(this).siblings().length == 0){
+                _menu.id = $item.data("id");
+                _menu.url = $item.data("url");
+                _menu.target = $item.data("target");
+                _menu.icon = $item.find("i").data("icon");
+                _menu.title = $item.find("cite").text();
+
+                //访问远程地址
+                if(_menu.target == "_blank"){
+                    window.location.href = _menu.url;
+                    return ;
+                }
+                //添加标签
+                tab.show(_menu);
+            }
+            console.log("菜单点击");
+        })
+
+        /**
+         * 菜单分页操作
+         */
+            //关闭所有分页
+        $("#LAY_tab_ctrls .closePageAll").click(function () {
+            tab.deleteAll();
+        });
+
+            //关闭其他
+        $("#LAY_tab_ctrls .closePageOther").click(function () {
+            tab.deleteOth();
+        });
+
+            //刷新当前
+        $("#LAY_tab_ctrls .refresh").on("click",function(){
+
+            if($(this).hasClass("refreshThis")){
+                $(this).removeClass("refreshThis");
+                $("#LAY_tab_content .layui-tab-item.layui-show iframe")[0].contentWindow.location.reload(true);
+                setTimeout(function(){
+                    $("#LAY_tab_ctrls .refresh").addClass("refreshThis");
+                },2000)
+            }else{
+                layer.msg("操作过于频繁！");
+            }
+        })
 
 
     });
