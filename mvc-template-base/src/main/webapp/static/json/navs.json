@@ -14,13 +14,13 @@
 		{
 			"id" : 20100,
 			"title" : "面板",
-			"href" : "page/404.html",
+			"url" : "page/404.html",
 			"spread" : false
 		},
 		{
 			"id" : 20200,
 			"title" : "按钮",
-			"href" : "page/login/login.html",
+			"url" : "model/button",
 			"spread" : false
 		}
 	]
@@ -34,7 +34,7 @@
 		{
 			"id" : 30100,
 			"title" : "登录",
-			"href" : "page/404.html",
+			"url" : "page/404.html",
 			"spread" : false,
 			"target" : "_blank"
 		}
