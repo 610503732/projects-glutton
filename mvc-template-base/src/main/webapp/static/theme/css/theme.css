@@ -13,19 +13,23 @@
 .layui-bg-black .layui-body .layui-tab  .layadmin-tab-ctrls .layui-nav-item > a { color:#000; }
 .layui-bg-black .layui-body .layui-tab  .layadmin-tab-ctrls a span.layui-nav-more{border-color:#333 transparent transparent;}
 .layui-bg-black .layui-body .layui-tab  .layadmin-tab-ctrls a span.layui-nav-more.layui-nav-mored{ border-color:transparent transparent #333;}
-/*.layui-bg-black .layui-body .layui-tab  .layadmin-tab-ctrls .layui-nav-child dd.layui-this,*/
-/*.layui-bg-black .layui-body .layui-tab  .layadmin-tab-ctrls .layui-nav-child dd.layui-this a {*/
-    /*background: none;*/
-    /*color: #333;*/
-/*}*/
-
+.layui-bg-black .layui-header .layui-layout-right.layui-nav  .layui-this,
+.layui-bg-black .layui-header .layui-layout-right.layui-nav  .layui-this a,
+.layui-bg-black .layui-body .layui-tab  .layadmin-tab-ctrls.layui-nav  .layui-this,
+.layui-bg-black .layui-body .layui-tab  .layadmin-tab-ctrls.layui-nav  .layui-this a{
+    background-color: transparent;
+    color: black;
+}
+.layui-bg-black .layui-header .layui-layout-right.layui-nav .layui-nav-child a:hover,
+.layui-bg-black .layui-body .layui-tab  .layadmin-tab-ctrls.layui-nav  .layui-nav-child a:hover {
+    color: #fff;
+    background-color: #5FB878;
+}
 
 .layui-bg-black .layui-body .layui-tab  .layadmin-tab-ctrls .layui-nav-child dd.layui-this a:hover {
     background-color: #5FB878;
     color: #fff;
 }
-
-
 
 .layui-bg-black .layui-body .layui-tab .layui-tab-title li{
     color: black ;

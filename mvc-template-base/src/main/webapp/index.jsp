@@ -54,19 +54,19 @@
                 </li>
             </ul>
             <ul class="layui-nav layui-layout-right">
-                <li class="layui-nav-item">
+                <li class="layui-nav-item" lay-unselect="">
                     <a href="javascript:;"><i class="layui-icon layui-icon-notice"></i><cite>系统公告</cite></a>
                 </li>
-                <li class="layui-nav-item">
+                <li class="layui-nav-item" lay-unselect="">
                     <a href="javascript:;"><i class="layui-icon layui-icon-password"></i><cite>锁屏</cite></a>
                 </li>
-                <li class="layui-nav-item">
+                <li class="layui-nav-item" lay-unselect="">
                     <a href="javascript:;">
                         <img src="static/theme/image/face.jpg" class="layui-circle" width="35" height="35">
                         <cite>老坛酸菜</cite>
                     </a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="javascript:;" data-url="page/user/userInfo.html"><i class="layui-icon layui-icon-username" data-icon="icon-zhanghu"></i><cite>个人资料</cite></a></dd>
+                    <dl class="layui-nav-child" lay-unselect="" >
+                        <dd ><a href="javascript:;" data-url="page/user/userInfo.html"><i class="layui-icon layui-icon-username" data-icon="icon-zhanghu"></i><cite>个人资料</cite></a></dd>
                         <dd><a href="javascript:;" data-url="page/user/changePwd.html"><i class="layui-icon layui-icon-password" data-icon="icon-shezhi1"></i><cite>修改密码</cite></a></dd>
                         <dd><a href="javascript:;" class="changeSkin"><i class="layui-icon layui-icon-theme"></i><cite>更换主题</cite></a></dd>
                         <dd><a href="page/login/login.html" class="signOut"><i class="iconfont icon-loginout"></i><cite>退出</cite></a></dd>
@@ -83,7 +83,7 @@
                     <a class="img" title="我的头像" ><img src="${ctx}/static/theme/image/face.jpg"></a>
                     <p>你好！<span >用户XXX</span>, 欢迎登录</p>
                 </div>
-                <div id="LAY_nav_menu">
+                <div id="LAY_nav_menu" class="cursor-pointer">
                     <ul class="layui-nav layui-nav-tree" style="height: 759px;">
                         <li class="layui-nav-item">
                             <a data-url="page/main.html">

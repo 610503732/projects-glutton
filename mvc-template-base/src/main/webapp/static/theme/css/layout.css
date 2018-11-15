@@ -12,7 +12,8 @@
 
 
 /* 侧边栏盒子 */
-.layui-layout-admin .layui-side {  width: 220px; }
+.layui-layout-admin .layui-side,
+.layui-layout-admin .layui-side  .layui-nav.layui-nav-tree {  width: 220px; }
 .layui-layout-admin .layui-side  .layadmin-user-photo{width: 200px; height: 120px; padding-top: 15px; padding-bottom: 5px;}
 .layui-layout-admin .layui-side  .layadmin-user-photo a.img{ display: block; width: 76px; height: 76px; margin: 0 auto; margin-bottom: 15px;}
 .layui-layout-admin .layui-side  .layadmin-user-photo a.img img{ display: block; border: none; width: 100%; height: 100%; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%; border: 4px solid #44576b;}
