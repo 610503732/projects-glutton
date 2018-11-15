@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="static/theme/css/common.css" media="all" />
     <link rel="stylesheet" href="static/theme/css/overall.css" media="all" />
     <link rel="stylesheet" href="static/theme/css/theme.css" media="all" />
+    <link rel="stylesheet" href="static/theme/css/transition.css" media="all" />
 </head>
 <style type="text/css">
     /** 样式定义在页面渲染前 **/
@@ -218,7 +219,7 @@
                 _menu = {};
 
             //如果不存在子级
-            if($(this).siblings().length == 0){
+            if($item.siblings().length == 0){
                 _menu.id = $item.data("id");
                 _menu.url = $item.data("url");
                 _menu.target = $item.data("target");
@@ -233,7 +234,12 @@
                 //添加标签
                 tab.show(_menu);
             }
-            console.log("菜单点击");
+            $item.parent("li").siblings().removeClass("layui-nav-itemed");
+        })
+            //添加菜单的二次监听
+            //如果当前菜单隐藏，则更换成显示菜单的布局
+        $("#LAY_nav_menu").on("click",".layui-nav .layui-nav-item a",function(){
+            if($(".layui-layout-admin").hasClass("layadmin-layout-mune-hide")) $(".layui-layout-admin").toggleClass("layadmin-layout-mune-hide");
         })
 
         /**
@@ -243,12 +249,10 @@
         $("#LAY_tab_ctrls .closePageAll").click(function () {
             tab.deleteAll();
         });
-
             //关闭其他
         $("#LAY_tab_ctrls .closePageOther").click(function () {
             tab.deleteOth();
         });
-
             //刷新当前
         $("#LAY_tab_ctrls .refresh").on("click",function(){
 
@@ -263,6 +267,12 @@
             }
         })
 
+        /**
+         * 菜单伸缩
+         */
+        $("#LAY_menu_toggle").click(function(){
+            $(".layui-layout-admin").toggleClass("layadmin-layout-mune-hide");
+        })
 
     });
 </script>

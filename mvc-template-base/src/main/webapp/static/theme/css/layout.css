@@ -72,8 +72,29 @@
 
 
 
+/**========================== 菜单收缩的布局 =================================**/
+.layadmin-layout-mune-hide .layui-body {
+    left: 60px;
+}
+.layadmin-layout-mune-hide .layui-footer{
+    left: 62px;
+}
 
-
-
+/* 侧边栏盒子 */
+.layadmin-layout-mune-hide .layui-side,
+.layadmin-layout-mune-hide .layui-side  .layui-nav.layui-nav-tree  {  width: 60px; }
+.layadmin-layout-mune-hide .layui-side  .layadmin-user-photo,
+.layadmin-layout-mune-hide .layui-side .layui-nav.layui-nav-tree span.layui-nav-more ,
+.layadmin-layout-mune-hide .layui-side .layui-nav.layui-nav-tree > .layui-nav-item > a > cite {display: none;}
+.layadmin-layout-mune-hide .layui-side .layui-nav.layui-nav-tree .layui-nav-item a i {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    margin-top: -19px;
+}
+.layadmin-layout-mune-hide .layui-side .layui-nav.layui-nav-tree .layui-nav-item {
+    height: 60px;
+    overflow: hidden;
+}
 
 

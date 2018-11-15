@@ -43,3 +43,8 @@
 .layui-bg-black  .layui-body .layui-tab-content .layui-tab-item{background-color: white;}
 .layui-bg-black .layui-footer{ color: black;}
 
+/**================== 菜单隐藏 样式 =======================**/
+.layadmin-layout-mune-hide .layui-side .layui-nav.layui-nav-tree  .layui-this,
+.layadmin-layout-mune-hide .layui-side .layui-nav.layui-nav-tree  .layui-this a{
+    background-color: transparent;
+}
