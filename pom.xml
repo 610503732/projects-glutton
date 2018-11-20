@@ -18,6 +18,7 @@
         <module>study-mybatis</module>
         <module>mvc-template-mybatis</module>
         <module>study-design-pattern</module>
+        <module>admin-mvc-hr</module>
     </modules>
 
 </project>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="cn.com.git.app.dao.SysUserMapper" >
-  <resultMap id="BaseResultMap" type="cn.com.git.app.entity.pojo.SysUser" >
+  <resultMap id="BaseResultMap" type="cn.com.SysUser" >
     <id column="ID" property="id" jdbcType="VARCHAR" />
     <result column="NAME" property="name" jdbcType="VARCHAR" />
     <result column="PASSWORD" property="password" jdbcType="VARCHAR" />
@@ -19,13 +19,13 @@
     delete from SYS_USER
     where ID = #{id,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="cn.com.git.app.entity.pojo.SysUser" >
+  <insert id="insert" parameterType="cn.com.SysUser" >
     insert into SYS_USER (ID, NAME, PASSWORD
       )
     values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="cn.com.git.app.entity.pojo.SysUser" >
+  <insert id="insertSelective" parameterType="cn.com.SysUser" >
     insert into SYS_USER
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -50,7 +50,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.com.git.app.entity.pojo.SysUser" >
+  <update id="updateByPrimaryKeySelective" parameterType="cn.com.SysUser" >
     update SYS_USER
     <set >
       <if test="name != null" >
@@ -62,7 +62,7 @@
     </set>
     where ID = #{id,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="cn.com.git.app.entity.pojo.SysUser" >
+  <update id="updateByPrimaryKey" parameterType="cn.com.SysUser" >
     update SYS_USER
     set NAME = #{name,jdbcType=VARCHAR},
       PASSWORD = #{password,jdbcType=VARCHAR}
