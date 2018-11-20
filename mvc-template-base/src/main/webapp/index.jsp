@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="static/theme/css/overall.css" media="all" />
     <link rel="stylesheet" href="static/theme/css/theme.css" media="all" />
     <link rel="stylesheet" href="static/theme/css/transition.css" media="all" />
+
 </head>
 <style type="text/css">
     /** 样式定义在页面渲染前 **/
@@ -232,6 +233,7 @@
                 }
                 //添加标签
                 tab.show(_menu);
+
             }
             $item.parent("li").siblings().removeClass("layui-nav-itemed");
         })

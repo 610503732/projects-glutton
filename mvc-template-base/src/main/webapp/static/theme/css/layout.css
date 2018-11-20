@@ -98,3 +98,27 @@
 }
 
 
+/** 登录 **/
+.layadmin-user-login-box{
+    padding: 110px 0;
+}
+
+.layadmin-login-icon{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.layadmin-user-login-header{
+    margin-bottom: 14px;
+}
+
+.layadmin-user-login-body .layui-input {
+    padding-left: 40px;
+}
+
+
+

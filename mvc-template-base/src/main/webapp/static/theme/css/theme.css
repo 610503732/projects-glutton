@@ -47,3 +47,16 @@
 .layadmin-layout-mune-hide .layui-side .layui-nav.layui-nav-tree  .layui-this a{
     background-color: transparent;
 }
+
+
+/** 登录 **/
+.layadmin-bk-dark-blue{
+    background-color: #f2f2f2;
+    color: #666;
+}
+
+.layadmin-user-login-body{
+    width: 375px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
