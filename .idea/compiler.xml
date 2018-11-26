@@ -14,6 +14,7 @@
         <module name="native-template-base" />
         <module name="study-design-pattern" />
         <module name="study-mybatis" />
+        <module name="stydy-redis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
