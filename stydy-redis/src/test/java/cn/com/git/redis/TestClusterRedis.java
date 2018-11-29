@@ -12,6 +12,7 @@ import java.util.Set;
 
 /**
  * 集群服务
+ * redis 3.0 之后才提供集群服务
  */
 public class TestClusterRedis {
 
