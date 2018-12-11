@@ -34,7 +34,7 @@
         <hibernate-jpa.version>1.0.1.Final</hibernate-jpa.version>
 
         <!-- oracle驱动版本号 -->
-        <oracle-driver.version>6.0</oracle-driver.version>
+        <oracle-driver.version>11.2.0.1.0</oracle-driver.version>
 
         <!-- log4j日志包版本号 -->
         <slf4j.version>1.7.18</slf4j.version>
