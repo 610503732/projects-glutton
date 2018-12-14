@@ -20,6 +20,7 @@
         <module>study-design-pattern</module>
         <module>admin-mvc-hr</module>
         <module>stydy-redis</module>
+        <module>study-mq-rabbit</module>
     </modules>
 
 </project>
