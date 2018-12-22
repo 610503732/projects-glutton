@@ -7,7 +7,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="admin-mvc-hr" />
-        <module name="cloud" />
         <module name="common-utils" />
         <module name="mvc-template-base" />
         <module name="mvc-template-mybatis" />
