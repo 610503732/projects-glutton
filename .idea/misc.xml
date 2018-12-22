@@ -3,6 +3,7 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/admin-mvc-hr" />
+    <file type="web" url="file://$PROJECT_DIR$/admin-mvc-template-base" />
     <file type="web" url="file://$PROJECT_DIR$/mvc-template-base" />
     <file type="web" url="file://$PROJECT_DIR$/mvc-template-mybatis" />
     <file type="web" url="file://$PROJECT_DIR$/native-template-base" />
