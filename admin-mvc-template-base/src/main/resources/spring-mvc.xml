@@ -11,7 +11,7 @@
         http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd"
 >
 
-    <context:property-placeholder location="classpath:resources.properties"/>
+
 
     <!-- 自动扫描且只扫描 @Controller -->
     <context:component-scan base-package="cn.com.git.**.controller" use-default-filters="false">
