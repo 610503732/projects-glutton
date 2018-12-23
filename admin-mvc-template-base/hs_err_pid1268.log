@@ -1,0 +1,159 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=1268, tid=0x0000000000001d60
+#
+# JRE version:  (8.0_152-b39) (build )
+# Java VM: OpenJDK 64-Bit Server VM (25.152-b39 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000035b3000):  JavaThread "Unknown thread" [_thread_in_vm, id=7520, stack(0x00000000033b0000,0x00000000034b0000)]
+
+Stack: [0x00000000033b0000,0x00000000034b0000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00000000035b3000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=7520, stack(0x00000000033b0000,0x00000000034b0000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 38400K, used 665K [0x00000000d5b80000, 0x00000000d8600000, 0x0000000100000000)
+  eden space 33280K, 2% used [0x00000000d5b80000,0x00000000d5c26670,0x00000000d7c00000)
+  from space 5120K, 0% used [0x00000000d8100000,0x00000000d8100000,0x00000000d8600000)
+  to   space 5120K, 0% used [0x00000000d7c00000,0x00000000d7c00000,0x00000000d8100000)
+ ParOldGen       total 87552K, used 0K [0x0000000081200000, 0x0000000086780000, 0x00000000d5b80000)
+  object space 87552K, 0% used [0x0000000081200000,0x0000000081200000,0x0000000086780000)
+ Metaspace       used 772K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 73K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000000012a70000,0x0000000012e70000] byte_map_base: 0x0000000012667000
+
+Marking Bits: (ParMarkBitMap*) 0x000000005c855aa0
+ Begin Bits: [0x0000000013720000, 0x00000000156d8000)
+ End Bits:   [0x00000000156d8000, 0x0000000017690000)
+
+Polling page: 0x0000000000ff0000
+
+CodeCache: size=245760Kb used=328Kb max_used=328Kb free=245431Kb
+ bounds [0x00000000036b0000, 0x0000000003920000, 0x00000000126b0000]
+ total_blobs=57 nmethods=0 adapters=38
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.031 loading class java/lang/Short
+Event: 0.031 loading class java/lang/Short done
+Event: 0.031 loading class java/lang/Integer
+Event: 0.031 loading class java/lang/Integer done
+Event: 0.031 loading class java/lang/Long
+Event: 0.031 loading class java/lang/Long done
+Event: 0.032 loading class java/lang/NullPointerException
+Event: 0.033 loading class java/lang/NullPointerException done
+Event: 0.033 loading class java/lang/ArithmeticException
+Event: 0.033 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x00007ff776100000 - 0x00007ff776131000 	E:\E_SOFTWARE\ideaIU\install\IntelliJ IDEA 2018.1.4\jre64\bin\java.exe
+0x00007ff8b2b90000 - 0x00007ff8b2d71000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff8b0620000 - 0x00007ff8b06d2000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff8af350000 - 0x00007ff8af5c3000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff8b0c70000 - 0x00007ff8b0d11000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff8b1110000 - 0x00007ff8b11ae000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff8b0d20000 - 0x00007ff8b0d7b000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff8b0400000 - 0x00007ff8b0524000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff8b0d90000 - 0x00007ff8b0f20000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff8aef60000 - 0x00007ff8aef80000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff8b2930000 - 0x00007ff8b2958000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff8af150000 - 0x00007ff8af2e2000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff8aff80000 - 0x00007ff8b001f000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff8af050000 - 0x00007ff8af14a000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff8a0400000 - 0x00007ff8a0669000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.345_none_fb429a5930656358\COMCTL32.dll
+0x00007ff8b00a0000 - 0x00007ff8b03c3000 	C:\WINDOWS\System32\combase.dll
+0x00007ff8aefd0000 - 0x00007ff8af04a000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ff8b03d0000 - 0x00007ff8b03fd000 	C:\WINDOWS\System32\IMM32.DLL
+0x000000005bed0000 - 0x000000005bfa2000 	E:\E_SOFTWARE\ideaIU\install\IntelliJ IDEA 2018.1.4\jre64\bin\msvcr100.dll
+0x000000005c090000 - 0x000000005c8d1000 	E:\E_SOFTWARE\ideaIU\install\IntelliJ IDEA 2018.1.4\jre64\bin\server\jvm.dll
+0x00007ff8b0d80000 - 0x00007ff8b0d88000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ff8ad000000 - 0x00007ff8ad023000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff89a390000 - 0x00007ff89a39a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff89cf40000 - 0x00007ff89cf49000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ff8b0b30000 - 0x00007ff8b0b9c000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff8acfc0000 - 0x00007ff8acfea000 	C:\WINDOWS\SYSTEM32\winmmbase.dll
+0x00007ff8aef80000 - 0x00007ff8aefc9000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x00007ff8a8070000 - 0x00007ff8a807f000 	E:\E_SOFTWARE\ideaIU\install\IntelliJ IDEA 2018.1.4\jre64\bin\verify.dll
+0x00007ff8a63f0000 - 0x00007ff8a6419000 	E:\E_SOFTWARE\ideaIU\install\IntelliJ IDEA 2018.1.4\jre64\bin\java.dll
+0x00007ff8a63c0000 - 0x00007ff8a63e3000 	E:\E_SOFTWARE\ideaIU\install\IntelliJ IDEA 2018.1.4\jre64\bin\instrument.dll
+0x00007ff8a63a0000 - 0x00007ff8a63b6000 	E:\E_SOFTWARE\ideaIU\install\IntelliJ IDEA 2018.1.4\jre64\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Dmaven.multiModuleProjectDirectory=D:\D_WORKSPACE\IDEA_WORKSPACE\projects-glutton\admin-mvc-template-base -Dmaven.home=E:\E_SOFTWARE\apache-maven-3.5.0 -Dclassworlds.conf=E:\E_SOFTWARE\apache-maven-3.5.0\bin\m2.conf -javaagent:E:\E_SOFTWARE\ideaIU\install\IntelliJ IDEA 2018.1.4\lib\idea_rt.jar=56954:E:\E_SOFTWARE\ideaIU\install\IntelliJ IDEA 2018.1.4\bin -Dfile.encoding=UTF-8 
+java_command: org.codehaus.classworlds.Launcher -Didea.version=2018.1.4 -s E:\E_SOFTWARE\apache-maven-3.5.0\conf\settings.xml -Dmaven.repo.local=D:\E_SOFTWARE\maven_lib clean -f pom.xml
+java_class_path (initial): E:\E_SOFTWARE\apache-maven-3.5.0\boot\plexus-classworlds-2.5.2.jar;E:\E_SOFTWARE\ideaIU\install\IntelliJ IDEA 2018.1.4\lib\idea_rt.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=E:\E_SOFTWARE\JDK\jdk7
+CLASSPATH=.;E:\E_SOFTWARE\JDK\jdk7\lib;
+PATH=D:\E_SOFTWARE\oracle_base\oracle11\product\11.2.0\dbhome_1\bin;E:\E_SOFTWARE\apache-maven-3.5.0\bin;E:\E_SOFTWARE\JDK\jdk7\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;E:\E_SOFTWARE\nodejs\install\;C:\Oracle\ora90\BIN\;E:\E_SOFTWARE\git\install\Git\cmd;D:\E_SOFTWARE\svn\client\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;E:\E_SOFTWARE\python\install;C:\WINDOWS\System32\OpenSSH\;C:\Users\Administrator.PC-201802101945\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator.PC-201802101945\AppData\Roaming\npm;
+USERNAME=Administrator
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 17134 (10.0.17134.1)
+
+CPU:total 6 (initial active 6) (6 cores per cpu, 1 threads per core) family 6 model 158 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 8307396k(1459508k free), swap 10404548k(4768k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.152-b39) for windows-amd64 JRE (1.8.0_152-release-1136-b39), built on May 14 2018 16:48:09 by "builduser" with MS VC++ 10.0 (VS2010)
+
+time: Sun Dec 23 15:00:45 2018
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
