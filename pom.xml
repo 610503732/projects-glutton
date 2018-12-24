@@ -21,6 +21,7 @@
         <module>admin-mvc-hr</module>
         <module>stydy-redis</module>
         <module>study-mq-rabbit</module>
+        <module>mvc-template-redis</module>
     </modules>
 
 </project>

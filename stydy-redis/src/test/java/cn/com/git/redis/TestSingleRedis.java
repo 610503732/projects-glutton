@@ -20,7 +20,7 @@ public class TestSingleRedis {
     @BeforeClass
     public static void setUpBeforeClass() throws Exception {
         // 单个节点
-        jedis = new Jedis("192.168.254.11");
+        jedis = new Jedis("192.168.254.106");
 
     }
 

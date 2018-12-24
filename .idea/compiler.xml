@@ -11,6 +11,7 @@
         <module name="common-utils" />
         <module name="mvc-template-base" />
         <module name="mvc-template-mybatis" />
+        <module name="mvc-template-redis" />
         <module name="native-template-base" />
         <module name="study-design-pattern" />
         <module name="study-mq-rabbit" />
@@ -25,6 +26,7 @@
       <module name="cloud-study-controller" target="1.8" />
       <module name="cloud-study-eureka" target="1.8" />
       <module name="cloud-study-hello" target="1.8" />
+      <module name="study-spring-boot" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
