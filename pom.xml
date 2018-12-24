@@ -19,6 +19,7 @@
         <module>study-design-pattern</module>
         <module>stydy-redis</module>
         <module>study-mq-rabbit</module>
+        <module>admin-mvc-template-base</module>
         <module>mvc-template-redis</module>
     </modules>
 
