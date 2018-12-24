@@ -3,6 +3,7 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/admin-mvc-hr" />
+    <file type="web" url="file://$PROJECT_DIR$/admin-mvc-template-base" />
     <file type="web" url="file://$PROJECT_DIR$/mvc-template-base" />
     <file type="web" url="file://$PROJECT_DIR$/mvc-template-mybatis" />
     <file type="web" url="file://$PROJECT_DIR$/mvc-template-redis" />
@@ -13,16 +14,6 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
-    </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/admin-base/pom.xml" />
-        <option value="$PROJECT_DIR$/cloud-study-api/pom.xml" />
-        <option value="$PROJECT_DIR$/cloud-study-consumer/pom.xml" />
-        <option value="$PROJECT_DIR$/cloud-study-controller/pom.xml" />
-        <option value="$PROJECT_DIR$/cloud-study-eureka/pom.xml" />
-        <option value="$PROJECT_DIR$/cloud-study-hello/pom.xml" />
-      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="false" project-jdk-name="1.7" project-jdk-type="JavaSDK">
